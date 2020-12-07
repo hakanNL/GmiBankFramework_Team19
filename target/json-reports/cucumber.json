@@ -1,0 +1,154 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "User is on the gmibank homepage",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 15409609900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the gmibank homepage",
+            "match": {
+              "location": "LoginStepD.user_is_on_the_gmibank_homepage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "TC01 User should be able to login with valid credentials",
+        "description": "",
+        "id": "us-004-yu-login-page-should-accessible-with-valid-credentials;tc01-user-should-be-able-to-login-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 210236800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks on account-menu button",
+            "match": {
+              "location": "LoginStepD.user_clicks_on_account_menu_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 301701700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user selects on \"Sign in\" button on the dropdown menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sign in\"",
+                  "offset": 16
+                }
+              ],
+              "location": "LoginStepD.user_selects_on_button_on_the_dropdown_menu(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 224319800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enters a valid username \"valid_username\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"valid_username\"",
+                  "offset": 29
+                }
+              ],
+              "location": "LoginStepD.user_enters_a_valid_username(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 386144100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enters a valid password \"valid_password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"valid_password\"",
+                  "offset": 29
+                }
+              ],
+              "location": "LoginStepD.user_enters_a_valid_password(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 272092900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user clicks on -sing in- button",
+            "match": {
+              "location": "LoginStepD.user_clicks_on_sing_in_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 685800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "verify there should be a \"sign out\" button on the account-menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sign out\"",
+                  "offset": 25
+                }
+              ],
+              "location": "LoginStepD.verify_there_should_be_a_button_on_the_account_menu(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@gmibank"
+          }
+        ]
+      }
+    ],
+    "name": "US_004_YU_Login_page_should_accessible_with_valid_credentials",
+    "description": "",
+    "id": "us-004-yu-login-page-should-accessible-with-valid-credentials",
+    "keyword": "Feature",
+    "uri": "src\\test\\resources\\features\\US_004_YU_Login_page_should_accessible_with_valid_credentials.feature",
+    "tags": [
+      {
+        "name": "@gmibank",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

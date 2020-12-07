@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="16.812115">
+<testcase classname="US_004_YU_Login_page_should_accessible_with_valid_credentials" name="TC01 User should be able to login with valid credentials" time="16.812115">
+<system-out><![CDATA[Given user is on the gmibank homepage.......................................passed
+And user clicks on account-menu button......................................passed
+And user selects on "Sign in" button on the dropdown menu...................passed
+When user enters a valid username "valid_username"..........................passed
+When user enters a valid password "valid_password"..........................passed
+And user clicks on -sing in- button.........................................passed
+Then verify there should be a "sign out" button on the account-menu.........passed
+]]></system-out>
+</testcase>
+</testsuite>
