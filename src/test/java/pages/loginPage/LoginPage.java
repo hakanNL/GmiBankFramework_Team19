@@ -12,7 +12,7 @@ public class LoginPage {
         }
 
     @FindBy()
-    public WebElement ccc;
+    public WebElement aaa;
 
 
 }
