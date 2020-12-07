@@ -11,8 +11,25 @@ public class LoginPage {
             PageFactory.initElements(Driver.getDriver(), this);
         }
 
-    @FindBy()
-    public WebElement ccc;
+    @FindBy(id = "account-menu")
+    public WebElement accountMenu;
 
+    @FindBy(id = "login-item")
+    public WebElement signInButton;
+
+    @FindBy(name = "username")
+    public WebElement username;
+
+    @FindBy(name = "password")
+    public WebElement password;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement submitButton;
+
+    @FindBy(xpath = "//button[@type='button']")
+    public WebElement cancelButton;
+
+    @FindBy(xpath = "//span[text()='Sign out']")
+    public WebElement signOutButton;
 
 }
