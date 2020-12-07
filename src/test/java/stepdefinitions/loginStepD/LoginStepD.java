@@ -18,7 +18,7 @@ public class LoginStepD {
 
     @Given("user clicks on account-menu button")
     public void user_clicks_on_account_menu_button() {
-        loginPage.accountMenu2.click();
+        loginPage.accountMenu.click();
 
     }
 
