@@ -1,4 +1,4 @@
-package pages.EmployeePage;
+package pages.employeePage;
 
 public class deneme {
 }

@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/features",
         glue = "GmiBankFramework_Team19/stepdefinitions",
-        tags = "gmibank",
+        tags = "@gmibank",
         dryRun = false
 )
 public class GmiBankRunner {

@@ -1,4 +1,4 @@
-package pages.ManagerPage;
+package pages.managerPage;
 
 public class deneme {
 }

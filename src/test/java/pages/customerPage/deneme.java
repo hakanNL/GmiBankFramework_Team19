@@ -1,4 +1,4 @@
-package pages.CustomerPage;
+package pages.customerPage;
 
 public class deneme {
 }
