@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml"},
 
         features = "src/test/resources/features",
-        glue = "GmiBankFramework_Team19/stepdefinitions",
-        tags = "@gmibank",
+        glue = "stepdefinitions",
+        tags = "@",
         dryRun = false
 )
 public class GmiBankRunner {
