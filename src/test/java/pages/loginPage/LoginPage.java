@@ -11,7 +11,7 @@ public class LoginPage {
             PageFactory.initElements(Driver.getDriver(), this);
         }
 
-    @FindBy(id = "account-me")
+    @FindBy(id = "account-menu")
     public WebElement accountMenu;
 
     @FindBy(id = "login-item")

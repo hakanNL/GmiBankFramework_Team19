@@ -32,5 +32,17 @@ public class US_006_MEInfoSegmentPage {
     @FindBy(xpath = "//button[@type = 'submit']")
     public WebElement UserInfoSaveButton;
 
+    @FindBy(xpath = "//label[@for='langKey']")
+    public WebElement languageTitle;
+
+    @FindBy(xpath = "//option[2]")
+    public WebElement türkçe;
+
+    @FindBy(xpath = "//div[@class='Toastify__toast-body']")
+    public WebElement savingMessage;
+
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    public WebElement emailMessage;
+
 
 }
