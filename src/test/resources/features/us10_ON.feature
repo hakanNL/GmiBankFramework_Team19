@@ -17,10 +17,10 @@
     Scenario: TC_03_If "City" is left blank, "This field is required." the message should pop up
       Then The -City- box should be left blank and at the bottom of the box -This field is required.- should popup the alert
     @US10TC04
-    Scenario: If "Country" is left blank, "This field is required." the message should pop up
+    Scenario: TC_04_If "Country" is left blank, "This field is required." the message should pop up
       Given The Country box should be left blank and at the bottom of the box -This field is required.- should popup the alert
     @US10TC05
-    Scenario: If "State" is left blank, "This field is required." the message should pop up
+    Scenario: TC_05_If "State" is left blank, "This field is required." the message should pop up
       Given The State box should be left blank and at the bottom of the box This field is required. should popup the alert
     @US10TC06
     Scenario: TC_06 When valid data is entered in the "Zip Code", "Address", "City", "Country", "State" fields, "This field is required." message should not pop up

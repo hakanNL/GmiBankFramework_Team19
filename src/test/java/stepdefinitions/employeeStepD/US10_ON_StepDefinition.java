@@ -1,7 +1,8 @@
 package stepdefinitions.employeeStepD;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import pages.employeePage.US10_US12_ON_Page;
