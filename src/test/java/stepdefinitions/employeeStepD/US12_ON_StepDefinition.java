@@ -20,7 +20,6 @@ public class US12_ON_StepDefinition {
         }
         Driver.closeDriver();
     }
-
     //============================TC02====================================
     @Given("Employee sees View customer information button and clicked")
     public void employee_sees_customer_information_button_and_clicked() {
@@ -33,14 +32,12 @@ public class US12_ON_StepDefinition {
         ReusableMethods.verifyElementDisplayed(page.viewdekiEditLinki);
         Driver.closeDriver();
     }
-
     //============================TC03====================================
     @Given("The Employee verifies that she sees the Edit button of customer information.")
     public void the_Employee_verifies_that_she_sees_the_Edit_button_of_customer_information() {
         ReusableMethods.verifyElementDisplayed(page.editLinki);
         Driver.closeDriver();
     }
-
     //============================TC04====================================
     @Given("The employee makes changes in some part of the customer information and clicks the Save button.")
     public void the_employee_makes_changes_in_some_part_of_the_customer_information_and_clicks_the_Save_button() {
@@ -53,7 +50,6 @@ public class US12_ON_StepDefinition {
         ReusableMethods.verifyElementDisplayed(page.popuptakiUpdateOnayYazisi);
         Driver.closeDriver();
     }
-
     //============================TC05====================================
     @Given("The employee clicks the Delete button of customer information")
     public void the_employee_clicks_the_button_of_customer_information() {

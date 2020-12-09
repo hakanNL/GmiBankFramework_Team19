@@ -95,6 +95,7 @@ public class US10_ON_StepDefinition {
     public void valid_data_is_entered_into_the_Address_box(String string) {
         page.addressBox.clear();
         page.addressBox.sendKeys(string);
+        System.out.println(page.addressBox.getAttribute("value"));
     }
 
     @Given("Valid data is entered into the City box {string}")
