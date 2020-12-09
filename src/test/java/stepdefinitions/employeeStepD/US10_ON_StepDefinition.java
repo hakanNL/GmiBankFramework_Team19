@@ -2,6 +2,7 @@ package stepdefinitions.employeeStepD;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import pages.employeePage.US10_US12_ON_Page;
 import utilities.Driver;
@@ -20,15 +21,15 @@ public class US10_ON_StepDefinition {
     public void valid_employee_data_must_be_entered_in_User_box_and_Password_box_and_click_Sign_in_button() {
         page.loginUserNameKutusu.sendKeys("Employee9");
         page.loginPasswordKutusu.sendKeys("Employee9");
-        ReusableMethods.wait(1);
+        ReusableMethods.waitForClickablility(page.loginSigninButonu, 2);
         page.loginSigninButonu.click();
     }
 
     @Given("Click the Manage Customers option from the My Operations dropdown.")
     public void click_the_Manage_Customers_option_from_the_My_Operations_dropdown() {
-        ReusableMethods.wait(1);
+        ReusableMethods.waitForClickablility(page.myOperationsDropDown, 2);
         page.myOperationsDropDown.click();
-        ReusableMethods.wait(2);
+        ReusableMethods.waitForClickablility(page.manageCustomerLinki, 2);
         page.manageCustomerLinki.click();
 
     }
@@ -43,7 +44,7 @@ public class US10_ON_StepDefinition {
     public void the_Zip_Code_box_should_be_left_blank_and_at_the_bottom_of_the_box_This_field_is_required_should_popup_the_alert() {
         page.zipCodeBox.clear();
         page.editAltindakiSaveButonu.click();
-        ReusableMethods.wait(1);
+        ReusableMethods.waitForClickablility(page.gerekliAlanUyarisiHataMesaji, 2);
         ReusableMethods.verifyElementDisplayed(page.gerekliAlanUyarisiHataMesaji);
         Driver.closeDriver();
     }
@@ -52,7 +53,7 @@ public class US10_ON_StepDefinition {
     public void the_Address_box_should_be_left_blank_and_at_the_bottom_of_the_box_This_field_is_required_should_popup_the_alert() {
         page.addressBox.clear();
         page.editAltindakiSaveButonu.click();
-        ReusableMethods.wait(1);
+        ReusableMethods.waitForClickablility(page.gerekliAlanUyarisiHataMesaji, 2);
         ReusableMethods.verifyElementDisplayed(page.gerekliAlanUyarisiHataMesaji);
         Driver.closeDriver();
     }
@@ -61,13 +62,28 @@ public class US10_ON_StepDefinition {
     public void the_City_box_should_be_left_blank_and_at_the_bottom_of_the_box_This_field_is_required_should_popup_the_alert() {
         page.cityBox.clear();
         page.editAltindakiSaveButonu.click();
-        ReusableMethods.wait(1);
+        ReusableMethods.waitForClickablility(page.gerekliAlanUyarisiHataMesaji, 2);
         ReusableMethods.verifyElementDisplayed(page.gerekliAlanUyarisiHataMesaji);
         Driver.closeDriver();
     }
     //====================================TC04===========================================
-//====================================TC05===========================================
-//====================================TC06===========================================
+    @Given("The Country box should be left blank and at the bottom of the box -This field is required.- should popup the alert")
+    public void the_Country_box_should_be_left_blank_and_at_the_bottom_of_the_box_This_field_is_required_should_popup_the_alert() {
+        Select select=new Select(page.countryDropDown);
+        select.selectByIndex(0);
+        page.editAltindakiSaveButonu.click();
+        ReusableMethods.verifyElementNotDisplayed(By.xpath("//*[text()='This field is required.']"));
+        Driver.closeDriver();
+    }
+    //====================================TC05===========================================
+    @Given("The State box should be left blank and at the bottom of the box This field is required. should popup the alert")
+    public void the_State_box_should_be_left_blank_and_at_the_bottom_of_the_box_This_field_is_required_should_popup_the_alert() {
+        page.stateBox.clear();
+        page.editAltindakiSaveButonu.click();
+        ReusableMethods.verifyElementNotDisplayed(By.xpath("//*[text()='This field is required.']"));
+        Driver.closeDriver();
+    }
+    //====================================TC06===========================================
     @Given("Valid data is entered into the Zip Code box {string}")
     public void valid_data_is_entered_into_the_Zip_Code_box(String string) {
         page.zipCodeBox.clear();
@@ -84,6 +100,8 @@ public class US10_ON_StepDefinition {
     public void valid_data_is_entered_into_the_City_box(String string) {
         page.cityBox.clear();
         page.cityBox.sendKeys(string);
+        ReusableMethods.wait(1);
+
     }
 
     @Given("Valid data is entered into the Country dropdown {string}")
