@@ -1,10 +1,11 @@
 package stepdefinitions.operationForCustomerStepD;
 
-import cucumber.api.java.en.When;
+
+import io.cucumber.java.en.When;
 
 public class US_006_ME_TC_04UpdateLastname {
 
-    pages.CustomerPage.US_006_MEInfoSegmentPage infoPage = new pages.CustomerPage.US_006_MEInfoSegmentPage();
+    pages.customerPage.US_006_MEInfoSegmentPage infoPage = new pages.customerPage.US_006_MEInfoSegmentPage();
 
     @When("Clear Last Name field")
     public void clear_Last_Name_field() {

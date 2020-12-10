@@ -1,11 +1,12 @@
 package stepdefinitions.operationForCustomerStepD;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import pages.CustomerPage.US_006_MEInfoSegmentPage;
+import pages.customerPage.US_006_MEInfoSegmentPage;
 import pages.loginPage.LoginPage;
 import utilities.ConfigurationReader;
 import utilities.ReusableMethods;
@@ -51,33 +52,34 @@ public class US_006_MEInfoSegmentStepD {
     }
 
     @Then("Verify on First Name field {string}")
-    public void verify_on_First_Name_field(String string) throws InterruptedException {
-        Thread.sleep(3000);
-        //Assert.assertTrue(infoPage.UserInfoFirstName.getText());
-        //String st = infoPage.FirstNameText.getText();
-        //System.out.println(st);
-        System.out.println(ReusableMethods.getElementsText(By.xpath("//select")));
+    public void verify_on_First_Name_field(String string) {
+        System.out.println(infoPage.UserInfoFirstName.getAttribute("value"));
+        Assert.assertEquals("Mehmet1Customer",infoPage.UserInfoFirstName.getAttribute("value"));
+
     }
 
     @Then("Verify on Last Name field {string}")
-    public void verify_on_Last_Name_field(String string) throws InterruptedException {
-        Thread.sleep(3000);
-        Assert.assertTrue(infoPage.UserInfoLastName.isDisplayed());
-        System.out.println(infoPage.UserInfoLastName.getText());
+    public void verify_on_Last_Name_field(String string) {
+        System.out.println(infoPage.UserInfoLastName.getAttribute("value"));
+        Assert.assertEquals("Ekinci",infoPage.UserInfoLastName.getAttribute("value"));
     }
 
     @Then("Verify on Email field {string}")
-    public void verify_on_Email_field(String string) throws InterruptedException {
-        Thread.sleep(3000);
-        //Assert.assertTrue(infoPage.UserInfoEmail.getText());
-        System.out.println(infoPage.UserInfoEmail.getText());
+    public void verify_on_Email_field(String string) {
+        System.out.println(infoPage.UserInfoEmail.getAttribute("value"));
+        Assert.assertEquals("izmirsh12@gmail.com",infoPage.UserInfoEmail.getAttribute("value"));
     }
 
     @Then("Verify on Language field {string}")
-    public void verify_on_Language_field(String string) throws InterruptedException {
-        Thread.sleep(3000);
-        //Assert.assertTrue(infoPage.UserInfoLanguage.getText());
+    public void verify_on_Language_field(String string)  {
         System.out.println(infoPage.UserInfoLanguage.getText());
+        Assert.assertTrue(infoPage.UserInfoLanguage.getText().contains("English"));
+    }
+
+    @Then("click Sign out button")
+    public void click_Sign_out_button() {
+        infoPage.signOutButton.click();
+
     }
 
 

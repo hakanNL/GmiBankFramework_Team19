@@ -1,10 +1,11 @@
 package stepdefinitions.operationForCustomerStepD;
 
-import cucumber.api.java.en.When;
+
+import io.cucumber.java.en.When;
 
 public class US_006_ME_TC_05UpdateEmail {
 
-    pages.CustomerPage.US_006_MEInfoSegmentPage infoPage = new pages.CustomerPage.US_006_MEInfoSegmentPage();
+    pages.customerPage.US_006_MEInfoSegmentPage infoPage = new pages.customerPage.US_006_MEInfoSegmentPage();
 
     @When("Clear Email field")
     public void clear_Email_field() {

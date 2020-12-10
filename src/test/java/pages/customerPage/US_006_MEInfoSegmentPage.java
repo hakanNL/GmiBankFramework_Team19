@@ -1,4 +1,4 @@
-package pages.CustomerPage;
+package pages.customerPage;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,11 +38,17 @@ public class US_006_MEInfoSegmentPage {
     @FindBy(xpath = "//option[2]")
     public WebElement türkçe;
 
+    @FindBy(xpath = "//option[1]")
+    public WebElement english;
+
     @FindBy(xpath = "//div[@class='Toastify__toast-body']")
     public WebElement savingMessage;
 
     @FindBy(xpath = "//div[@class='invalid-feedback']")
     public WebElement emailMessage;
+
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[4]")
+    public WebElement signOutButton;
 
 
 }

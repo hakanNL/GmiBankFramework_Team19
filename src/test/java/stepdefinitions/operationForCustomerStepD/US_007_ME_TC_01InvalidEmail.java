@@ -1,12 +1,13 @@
 package stepdefinitions.operationForCustomerStepD;
 
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class US_007_ME_TC_01InvalidEmail {
 
-    pages.CustomerPage.US_006_MEInfoSegmentPage infoPage = new pages.CustomerPage.US_006_MEInfoSegmentPage();
+    pages.customerPage.US_006_MEInfoSegmentPage infoPage = new pages.customerPage.US_006_MEInfoSegmentPage();
 
     @When("Send invalid {string} to Email field")
     public void send_invalid_to_Email_field(String invalidEmail) {

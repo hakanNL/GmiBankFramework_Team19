@@ -11,11 +11,17 @@
     And click User Name button
     And clicks User Info button
 
+
+
   Scenario: TC_01 There should be user info being populated when navigating to user info firstname, lastname , email and language
     Then Verify on First Name field "Mehmet1Customer"
     Then Verify on Last Name field "Ekinci"
     Then Verify on Email field "izmirsh12@gmail.com"
     Then Verify on Language field "English"
+     And click User Name button
+    And click Sign out button
+
+
 
 
     Scenario: TC_02 There should be 2 languages available "English and Turkish"
@@ -24,6 +30,11 @@
     Then select Türkish
      Then click Save button
     Then Verify Dil
+      And click Languages Row button
+      Then select English
+      Then click Save button
+      And click User Name button
+      And click Sign out button
 
 
   Scenario: TC_03 There should be an option to update firstname
@@ -31,6 +42,8 @@
     When Send "MehmetCustomer" to First Name field
     And click Save button
     Then Verify Settings saved!
+    And click User Name button
+    And click Sign out button
 
 
   Scenario: TC_04 There should be an option to update lastname
@@ -38,6 +51,8 @@
     When Send "Ekici" to Last Name field
     And click Save button
     Then Verify Settings saved!
+    And click User Name button
+    And click Sign out button
 
 
    Scenario: TC_05  There should be an option to update email id adding "@" sign and "." extension
@@ -45,6 +60,8 @@
    When Send "izmir@gmail.net" to Email field
    And click Save button
    Then Verify Settings saved!
+     And click User Name button
+     And click Sign out button
 
 
 

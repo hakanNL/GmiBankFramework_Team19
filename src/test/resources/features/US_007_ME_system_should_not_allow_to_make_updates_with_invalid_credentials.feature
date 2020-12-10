@@ -1,3 +1,4 @@
+@gmibank1
 Feature: US_007_ME System should not allow to make updates with invalid credentials
 
   Background: User is on the info segment of own account
@@ -15,15 +16,29 @@ Feature: US_007_ME System should not allow to make updates with invalid credenti
     And Clear Email field
     When Send invalid "izmirgmail.net" to Email field
     Then Verify This field is invalid
+    And click User Name button
+    And click Sign out button
 
 
   Scenario: Email id cannot contain just digits or chars without  '.' extension
     And Clear Email field
     When Send invalid without . "izmir@gmailnet" to Email field
     Then Verify This field is invalid
+    And click User Name button
+    And click Sign out button
 
-  @gmibank1
+
   Scenario:  Email id cannot contain just digits or chars without '@' sign and '.' extension
     And Clear Email field
     When Send invalid without . and @ "izmirgmailnet" to Email field
     Then Verify This field is invalid
+    And click User Name button
+    And click Sign out button
+
+
+  Scenario: There should not be an option of any other language other than English or Turkish
+    Then Verify just English and Turkish option in the language list
+    And click User Name button
+    And click Sign out button
+
+

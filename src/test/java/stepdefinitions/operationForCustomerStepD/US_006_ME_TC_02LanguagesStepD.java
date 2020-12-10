@@ -1,11 +1,12 @@
 package stepdefinitions.operationForCustomerStepD;
 
-import cucumber.api.java.en.Then;
+
+import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import utilities.ReusableMethods;
 
 public class US_006_ME_TC_02LanguagesStepD {
-    pages.CustomerPage.US_006_MEInfoSegmentPage infoPage = new pages.CustomerPage.US_006_MEInfoSegmentPage();
+    pages.customerPage.US_006_MEInfoSegmentPage infoPage = new pages.customerPage.US_006_MEInfoSegmentPage();
 
     @Then("Verify Language")
     public void verify_Language() {
@@ -33,7 +34,11 @@ public class US_006_ME_TC_02LanguagesStepD {
     public void verify_Dil() {
         ReusableMethods.wait(3);
         Assert.assertEquals("Dil",infoPage.languageTitle.getText());
-        System.out.println("infoPage.languageTitle.getText()");
+    }
+
+    @Then("select English")
+    public void select_English() {
+        infoPage.english.click();
     }
 
 }
