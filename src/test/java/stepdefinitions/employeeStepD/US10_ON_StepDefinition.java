@@ -1,6 +1,5 @@
 package stepdefinitions.employeeStepD;
 
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
@@ -10,7 +9,6 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US10_ON_StepDefinition {
-
     US10_US12_ON_Page page = new US10_US12_ON_Page();
 
     @Given("go to {string}")
@@ -22,22 +20,19 @@ public class US10_ON_StepDefinition {
     public void valid_employee_data_must_be_entered_in_User_box_and_Password_box_and_click_Sign_in_button() {
         page.loginUserNameKutusu.sendKeys("Employee9");
         page.loginPasswordKutusu.sendKeys("Employee9");
-        ReusableMethods.waitForClickablility(page.loginSigninButonu, 2);
         page.loginSigninButonu.click();
     }
 
     @Given("Click the Manage Customers option from the My Operations dropdown.")
     public void click_the_Manage_Customers_option_from_the_My_Operations_dropdown() {
-        ReusableMethods.waitForClickablility(page.myOperationsDropDown, 2);
+        ReusableMethods.waitForClickablility(page.myOperationsDropDown, 1);
         page.myOperationsDropDown.click();
-        ReusableMethods.waitForClickablility(page.manageCustomerLinki, 2);
+        ReusableMethods.waitForClickablility(page.manageCustomerLinki, 1);
         page.manageCustomerLinki.click();
-
     }
 
     @Given("The employee clicks the Edit button of customer information")
     public void the_employee_clicks_the_Edit_button_of_customer_information() {
-
         page.editLinki.click();
     }
     //====================================TC01===========================================
@@ -54,7 +49,7 @@ public class US10_ON_StepDefinition {
     public void the_Address_box_should_be_left_blank_and_at_the_bottom_of_the_box_This_field_is_required_should_popup_the_alert() {
         page.addressBox.clear();
         page.editAltindakiSaveButonu.click();
-        ReusableMethods.waitForClickablility(page.gerekliAlanUyarisiHataMesaji, 2);
+        ReusableMethods.waitForClickablility(page.gerekliAlanUyarisiHataMesaji, 1);
         ReusableMethods.verifyElementDisplayed(page.gerekliAlanUyarisiHataMesaji);
         Driver.closeDriver();
     }
@@ -63,7 +58,7 @@ public class US10_ON_StepDefinition {
     public void the_City_box_should_be_left_blank_and_at_the_bottom_of_the_box_This_field_is_required_should_popup_the_alert() {
         page.cityBox.clear();
         page.editAltindakiSaveButonu.click();
-        ReusableMethods.waitForClickablility(page.gerekliAlanUyarisiHataMesaji, 2);
+        ReusableMethods.waitForClickablility(page.gerekliAlanUyarisiHataMesaji, 1);
         ReusableMethods.verifyElementDisplayed(page.gerekliAlanUyarisiHataMesaji);
         Driver.closeDriver();
     }
@@ -95,15 +90,12 @@ public class US10_ON_StepDefinition {
     public void valid_data_is_entered_into_the_Address_box(String string) {
         page.addressBox.clear();
         page.addressBox.sendKeys(string);
-        System.out.println(page.addressBox.getAttribute("value"));
     }
 
     @Given("Valid data is entered into the City box {string}")
     public void valid_data_is_entered_into_the_City_box(String string) {
         page.cityBox.clear();
         page.cityBox.sendKeys(string);
-        ReusableMethods.wait(1);
-
     }
 
     @Given("Valid data is entered into the Country dropdown {string}")

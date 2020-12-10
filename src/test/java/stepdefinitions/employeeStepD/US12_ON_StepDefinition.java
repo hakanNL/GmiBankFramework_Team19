@@ -1,6 +1,5 @@
 package stepdefinitions.employeeStepD;
 
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebElement;
@@ -23,7 +22,7 @@ public class US12_ON_StepDefinition {
     //============================TC02====================================
     @Given("Employee sees View customer information button and clicked")
     public void employee_sees_customer_information_button_and_clicked() {
-        ReusableMethods.waitForClickablility(page.editLinki, 2);
+        ReusableMethods.waitForClickablility(page.editLinki, 1);
         page.editLinki.click();
     }
 
@@ -58,13 +57,13 @@ public class US12_ON_StepDefinition {
 
     @Given("The employee verifies that sees the -Confirm deletion- text in the pop-up.")
     public void the_employee_verifies_that_sees_the_text_in_the_pop_up() {
-        ReusableMethods.waitForClickablility(page.popuptakiEminMisinYazisi, 2);
+        ReusableMethods.waitForClickablility(page.popuptakiEminMisinYazisi, 1);
         ReusableMethods.verifyElementDisplayed(page.popuptakiEminMisinYazisi);
     }
 
     @Given("The employee clicks the Delete button in the -Confirm delete operation- popup")
     public void the_employee_clicks_the_button_in_the_popup() {
-        ReusableMethods.waitForClickablility(page.popuptakiDeleteButonu, 2);
+        ReusableMethods.waitForClickablility(page.popuptakiDeleteButonu, 1);
         page.popuptakiDeleteButonu.click();
     }
 
