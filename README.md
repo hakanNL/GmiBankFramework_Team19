@@ -1,1 +1,0 @@
-# GmiBankFramework_Team19
