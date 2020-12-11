@@ -1,5 +1,10 @@
 .idea
 /debug.log/
 /target/
+<<<<<<< HEAD
+
+/runners/
+=======
 runners
 debug.log
+>>>>>>> master
