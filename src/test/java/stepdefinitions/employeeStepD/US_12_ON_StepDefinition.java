@@ -4,12 +4,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
-import pages.employeePage.US10_US12_ON_Page;
+import pages.employeePage.US_10_US12_ON_Page;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US12_ON_StepDefinition {
-    US10_US12_ON_Page page = new US10_US12_ON_Page();
+public class US_12_ON_StepDefinition {
+    US_10_US12_ON_Page page = new US_10_US12_ON_Page();
 
     //============================TC01====================================
     @Given("The employee verifies that a list of all customers who have filled in their account information is seen.")

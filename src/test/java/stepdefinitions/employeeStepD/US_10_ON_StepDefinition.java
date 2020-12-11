@@ -5,12 +5,12 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
-import pages.employeePage.US10_US12_ON_Page;
+import pages.employeePage.US_10_US12_ON_Page;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US10_ON_StepDefinition {
-    US10_US12_ON_Page page = new US10_US12_ON_Page();
+public class US_10_ON_StepDefinition {
+    US_10_US12_ON_Page page = new US_10_US12_ON_Page();
 
     @Given("go to {string}")
     public void go_to(String string) {

@@ -38,6 +38,9 @@ public class US_002_ED_Page {
     @FindBy(xpath = "//*[text()='Your mobile phone number is invalid']")
     public WebElement mobilinvalid;
 
+    @FindBy(xpath ="//div[@class='Toastify__toast-container Toastify__toast-container--top-left toastify-container']")
+    public WebElement registrationconfirmation;
+
 
 
 

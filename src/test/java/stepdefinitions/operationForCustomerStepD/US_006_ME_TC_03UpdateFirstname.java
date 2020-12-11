@@ -16,7 +16,7 @@ public class US_006_ME_TC_03UpdateFirstname {
 
     @When("Send {string} to First Name field")
     public void send_to_First_Name_field(String firstname) {
-        infoPage.UserInfoFirstName.sendKeys("MehmetCustomer");
+        infoPage.UserInfoFirstName.sendKeys(firstname);
     }
 
     @Then("Verify Settings saved!")
