@@ -28,7 +28,7 @@
     Then Verify Language
     And click Languages Row button
     Then select Türkish
-     Then click Save button
+      Then click Save button
     Then Verify Dil
       And click Languages Row button
       Then select English
@@ -42,6 +42,9 @@
     When Send "MehmetCustomer" to First Name field
     And click Save button
     Then Verify Settings saved!
+    And Clear First Name field
+    And Send "Mehmet1Customer" to First Name field
+    And click Save button
     And click User Name button
     And click Sign out button
 
@@ -51,6 +54,9 @@
     When Send "Ekici" to Last Name field
     And click Save button
     Then Verify Settings saved!
+    And Clear Last Name field
+    And Send "Ekinci" to Last Name field
+    And click Save button
     And click User Name button
     And click Sign out button
 
@@ -60,6 +66,9 @@
    When Send "izmir@gmail.net" to Email field
    And click Save button
    Then Verify Settings saved!
+     And Clear Email field
+     And Send "izmirsh12@gmail.com" to Email field
+     And click Save button
      And click User Name button
      And click Sign out button
 

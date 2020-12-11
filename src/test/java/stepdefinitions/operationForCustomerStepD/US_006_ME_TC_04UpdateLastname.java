@@ -15,7 +15,7 @@ public class US_006_ME_TC_04UpdateLastname {
 
     @When("Send {string} to Last Name field")
     public void send_to_Last_Name_field(String newLastName) {
-        infoPage.UserInfoLastName.sendKeys("Ekici");
+        infoPage.UserInfoLastName.sendKeys(newLastName);
 
     }
 }
