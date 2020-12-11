@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import utilities.Driver;
 import utilities.ReusableMethods;
 
 import java.util.ArrayList;
@@ -16,12 +17,14 @@ public class US_007_ME_TC_04LanguageOptions {
 
     @Then("Verify just English and Turkish option in the language list")
     public void verify_just_English_and_Turkish_option_in_the_language_list() {
-        System.out.println(infoPage.UserInfoLanguage.getText());
-      //  System.out.println((ReusableMethods.getElementsText(By.xpath("//select"))));
-      //  List<String> list = new ArrayList<>();
-      //  list.add(0,"English");
-      //  list.add(1,"Türkçe");
-      //  Assert.assertTrue(ReusableMethods.getElementsText(By.xpath("//select")).equals(list));
+       System.out.println(infoPage.UserInfoLanguage.getText());
+
+
+        //List<String> list = new ArrayList<>();
+        //list.add(0,"English");
+        //list.add(1,"Türkçe");
+        //System.out.println(list);
+       // Assert.assertEquals(ReusableMethods.getElementsText(By.xpath("//select")), list);
         Assert.assertTrue(infoPage.UserInfoLanguage.getText().contains("English") && infoPage.UserInfoLanguage.getText().contains("Türkçe"));
         }
 
