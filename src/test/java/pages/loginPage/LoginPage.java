@@ -26,7 +26,7 @@ public class LoginPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement submitButton;
 
-    @FindBy(xpath = "//button[@type='button']")
+    @FindBy(xpath = "(//button/span[text()='Cancel']")
     public WebElement cancelButton;
 
     @FindBy(xpath = "//span[text()='Sign out']")
