@@ -1,6 +1,9 @@
 package stepdefinitions.loginStepD;
 
-import cucumber.api.java.en.*;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import pages.loginPage.LoginPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
