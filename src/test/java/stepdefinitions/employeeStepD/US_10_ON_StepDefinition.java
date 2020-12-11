@@ -2,14 +2,15 @@ package stepdefinitions.employeeStepD;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
-import pages.employeePage.US10_US12_ON_Page;
+import pages.employeePage.US_10_US12_ON_Page;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US10_ON_StepDefinition {
-    US10_US12_ON_Page page = new US10_US12_ON_Page();
+public class US_10_ON_StepDefinition {
+    US_10_US12_ON_Page page = new US_10_US12_ON_Page();
 
     @Given("go to {string}")
     public void go_to(String string) {
@@ -113,7 +114,8 @@ public class US10_ON_StepDefinition {
     @Then("-This field is required.- It should be verified that the text is not popup.")
     public void this_field_is_required_It_should_be_verified_that_the_text_is_not_popup() {
         page.editAltindakiSaveButonu.click();
-        ReusableMethods.verifyElementDisplayed(page.popuptakiUpdateOnayYazisi);
+        ReusableMethods.wait(3);
+        Assert.assertEquals(page.popuptakiUpdateOnayYazisi.getText(),"translation-not-found[gmiBankBackendApp.tPCustomer.updated]");
         Driver.closeDriver();
     }
 }
