@@ -1,7 +1,7 @@
 package runners;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml"},
 
         features = "src/test/resources/features",
-        glue = "GmiBankFramework_Team19/stepdefinitions",
-        tags = "smoketest",
+        glue = "stepdefinitions",
+        tags = "@TC_0001_User",
         dryRun = false
 )
 
