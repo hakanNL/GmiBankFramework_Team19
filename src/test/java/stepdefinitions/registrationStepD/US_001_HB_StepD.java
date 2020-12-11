@@ -5,7 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
-import pages.registrationPage.US_01_HB_Page;
+import pages.registrationPage.US_001_HB_Page;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -14,9 +14,7 @@ import static utilities.Driver.getDriver;
 
 public class US_001_HB_StepD {
 
-
-    US_01_HB_Page us_01_hb_page = new US_01_HB_Page();
-
+    US_001_HB_Page us_01_hb_page = new US_001_HB_Page();
 
     @Given("Kullanici SSN text box una gecerli bir gecerli_SSN girer")
     public void kullanici_SSN_text_box_una_gecerli_bir_girer() {
@@ -136,5 +134,6 @@ public class US_001_HB_StepD {
 
 
     }
+
 
 }
