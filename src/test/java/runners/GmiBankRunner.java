@@ -10,9 +10,9 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml"},
 
-        features = "src/test/resources/features",
-        glue = "GmiBankFramework_Team19/stepdefinitions",
-        tags = "@gmibank",
+        features = "src/test/resources/features/US_001_HB.feature",
+        glue = "stepdefinitions",
+        tags = "@US01",
         dryRun = false
 )
 public class GmiBankRunner {
