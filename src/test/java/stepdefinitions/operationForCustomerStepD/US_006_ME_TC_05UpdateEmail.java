@@ -14,7 +14,7 @@ public class US_006_ME_TC_05UpdateEmail {
 
     @When("Send {string} to Email field")
     public void send_to_Email_field(String newEmail) {
-       infoPage.UserInfoEmail.sendKeys("izmir@gmail.net");
+       infoPage.UserInfoEmail.sendKeys(newEmail);
     }
 
 
