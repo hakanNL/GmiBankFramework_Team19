@@ -266,9 +266,10 @@ public class ReusableMethods {
 
 
         public boolean isElementSelected(By locator){
+
             return webAction(locator).isSelected();
         }
-        public void sendValue(By locator, String value) {
+        public static void sendValue(By locator, String value) {
             try{
                 webAction(locator).sendKeys(value);
             }catch (Exception e){

@@ -1,7 +1,8 @@
 package runners;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
@@ -10,9 +11,10 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml"},
 
-        features = "src/test/resources/features/US_001_HB.feature",
+
+        features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@US01",
+        tags = "@gmibank",
         dryRun = false
 )
 public class GmiBankRunner {
