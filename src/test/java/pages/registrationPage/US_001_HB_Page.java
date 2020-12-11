@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-package pages.registrationPage;public class US_01_HB_Page {
-=======
 package pages.registrationPage;
 
 import org.openqa.selenium.WebElement;
@@ -57,6 +54,4 @@ public class US_01_HB_Page {
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement successRegisterMessage;
 
-
->>>>>>> refs/remotes/origin/master
 }
