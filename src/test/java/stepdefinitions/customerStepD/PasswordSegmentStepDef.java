@@ -1,4 +1,4 @@
-package stepdefinitions.operationForCustomerStepD;
+package stepdefinitions.customerStepD;
 
 import io.cucumber.java.en.*;
 import org.testng.Assert;

@@ -2,13 +2,14 @@ package stepdefinitions.employeeStepD;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
-import pages.employeePage.US10_US12_ON_Page;
+import pages.employeePage.US_10_US12_ON_Page;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class US12_ON_StepDefinition {
-    US10_US12_ON_Page page = new US10_US12_ON_Page();
+public class US_12_ON_StepDefinition {
+    US_10_US12_ON_Page page = new US_10_US12_ON_Page();
 
     //============================TC01====================================
     @Given("The employee verifies that a list of all customers who have filled in their account information is seen.")
@@ -46,7 +47,8 @@ public class US12_ON_StepDefinition {
 
     @Then("The employee verifies that it has seen the message -translation-not-found [gmiBankBackendApp.tPCustomer.updated]-")
     public void the_employee_verifies_that_it_has_seen_the_message_translation_not_found_gmiBankBackendApp_tPCustomer_updated() {
-        ReusableMethods.verifyElementDisplayed(page.popuptakiUpdateOnayYazisi);
+        ReusableMethods.wait(3);
+        Assert.assertEquals(page.popuptakiUpdateOnayYazisi.getText(),"translation-not-found[gmiBankBackendApp.tPCustomer.updated]");
         Driver.closeDriver();
     }
     //============================TC05====================================
@@ -69,7 +71,8 @@ public class US12_ON_StepDefinition {
 
     @Then("The employee verifies that has seen the -translation-not-found [gmiBankBackendApp.tPCustomer.deleted]- message.")
     public void the_employee_verifies_that_has_seen_the_message() {
-        ReusableMethods.verifyElementDisplayed(page.popuptakiDeleteOnayYazisi);
+        ReusableMethods.wait(3);
+        Assert.assertEquals(page.popuptakiDeleteOnayYazisi.getText(),"translation-not-found[gmiBankBackendApp.tPCustomer.deleted]");
         Driver.closeDriver();
     }
 }

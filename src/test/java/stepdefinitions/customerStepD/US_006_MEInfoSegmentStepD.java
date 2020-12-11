@@ -1,15 +1,12 @@
-package stepdefinitions.operationForCustomerStepD;
+package stepdefinitions.customerStepD;
 
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import pages.customerPage.US_006_MEInfoSegmentPage;
 import pages.loginPage.LoginPage;
-import utilities.ConfigurationReader;
-import utilities.ReusableMethods;
 
 public class US_006_MEInfoSegmentStepD {
 

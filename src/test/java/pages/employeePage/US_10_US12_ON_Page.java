@@ -6,8 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 import java.util.List;
 
-public class US10_US12_ON_Page {
-    public US10_US12_ON_Page(){
+public class US_10_US12_ON_Page {
+    public US_10_US12_ON_Page(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -32,10 +32,13 @@ public class US10_US12_ON_Page {
     public WebElement editAltindakiSaveButonu;
     @FindBy(xpath = "//tr[1]/td[10]/div/a[3]")
     public WebElement deleteLinki;
-    @FindBy(xpath = "//div[@class='Toastify__toast-container Toastify__toast-container--top-left toastify-container']")
+    @FindBy(xpath = "//div[.='translation-not-found[gmiBankBackendApp.tPCustomer.deleted]']")
     public WebElement popuptakiDeleteOnayYazisi;
-    @FindBy(xpath = "//div[@class='Toastify__toast-container Toastify__toast-container--top-left toastify-container']")
+    @FindBy(xpath = "//div[.='translation-not-found[gmiBankBackendApp.tPCustomer.updated]']")
     public WebElement popuptakiUpdateOnayYazisi;
+
+    //@FindBy(xpath = "//div[.='Internal server error.']")
+    //public WebElement popuptakiDeleteOnayYazisi;
     @FindBy(xpath = "//*[@class='btn btn-primary']")
     public WebElement viewdekiEditLinki;
     @FindBy(xpath = "//*[text()='Confirm delete operation']")

@@ -1,5 +1,5 @@
 .idea
 /debug.log/
 /target/
-/runners/
+runners
 debug.log
