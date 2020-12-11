@@ -1,18 +1,12 @@
-package stepdefinitions.operationForCustomerStepD;
+package stepdefinitions.customerStepD;
 
-import org.junit.Assert;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import pages.customerPage.US_015_SO_Page;
 import utilities.Driver;
 import utilities.ReusableMethods;
-
-import java.util.List;
 
 
 public class US_015_SO_StepD {

@@ -1,10 +1,9 @@
-package stepdefinitions.operationForCustomerStepD;
+package stepdefinitions.customerStepD;
 
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import utilities.Driver;
 
 public class US_006_ME_TC_03UpdateFirstname {
     pages.customerPage.US_006_MEInfoSegmentPage infoPage = new pages.customerPage.US_006_MEInfoSegmentPage();

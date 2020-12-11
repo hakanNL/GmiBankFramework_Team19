@@ -1,16 +1,8 @@
-package stepdefinitions.operationForCustomerStepD;
+package stepdefinitions.customerStepD;
 
 
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import utilities.Driver;
-import utilities.ReusableMethods;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class US_007_ME_TC_04LanguageOptions {
     pages.customerPage.US_006_MEInfoSegmentPage infoPage = new pages.customerPage.US_006_MEInfoSegmentPage();

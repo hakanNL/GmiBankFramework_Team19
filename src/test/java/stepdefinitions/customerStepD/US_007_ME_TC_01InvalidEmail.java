@@ -1,4 +1,4 @@
-package stepdefinitions.operationForCustomerStepD;
+package stepdefinitions.customerStepD;
 
 
 import io.cucumber.java.en.Then;
