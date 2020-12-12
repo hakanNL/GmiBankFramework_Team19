@@ -5,7 +5,7 @@
   And Click to User Account Menu and Click to SignIn
   And enters  username
   And enters  password
-  And user clicks signIn 'button
+  And user click signIn button
   Then user clicks myOperations
 
 
