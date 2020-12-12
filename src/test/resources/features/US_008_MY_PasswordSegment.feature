@@ -1,3 +1,4 @@
+@gmibank
 Feature:US_008 Password segment on Homepage should be editable
   Background:
     When 1Go to "https://gmibank.com/" link

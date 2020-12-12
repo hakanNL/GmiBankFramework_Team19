@@ -1,4 +1,4 @@
-@accountmanage01
+@gmibank
 Feature: User_account_manage
   Background: User check account
   Given Go to the web address: "http://www.gmibank.com/login"

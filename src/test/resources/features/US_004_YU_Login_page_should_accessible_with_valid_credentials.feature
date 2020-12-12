@@ -1,3 +1,4 @@
+@gmibank
 Feature: US_004_YU_Login_page_should_accessible_with_valid_credentials
 
   Background: User is on the gmibank homepage

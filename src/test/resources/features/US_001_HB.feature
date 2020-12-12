@@ -1,4 +1,4 @@
-@US01
+@gmibank
 Feature: System should allow any user to register with valid credentials validating
 
   Background: Kullanici register sayfasina gider
