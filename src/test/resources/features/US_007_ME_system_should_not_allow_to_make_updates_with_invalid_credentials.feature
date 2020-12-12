@@ -1,4 +1,4 @@
-
+@gmibank1
 Feature: US_007_ME System should not allow to make updates with invalid credentials
 
   Background: User is on the info segment of own account
@@ -35,7 +35,7 @@ Feature: US_007_ME System should not allow to make updates with invalid credenti
     And click User Name button
     And click Sign out button
 
-  @gmibank1
+
   Scenario: There should not be an option of any other language other than English or Turkish
     Then Verify just English and Turkish option in the language list
     And click User Name button

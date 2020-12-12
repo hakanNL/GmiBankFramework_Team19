@@ -16,7 +16,6 @@ public class US_007_ME_TC_01InvalidEmail {
 
     @Then("Verify This field is invalid")
     public void verify_This_field_is_invalid() {
-        System.out.println(infoPage.emailMessage.getText());
         Assert.assertEquals("This field is invalid",infoPage.emailMessage.getText());
     }
 }

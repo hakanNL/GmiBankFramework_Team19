@@ -22,7 +22,7 @@
 
 
 @Creatnewcostemer
-    Scenario: TC_02 Employe Creat new costemer
+    Scenario: TC_01_1_Employe Creat new costemer
 
       Given go to "http://gmibank.com/login"
       And Valid employee data must be entered in User box and Password box and click Sign in button

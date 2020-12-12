@@ -8,7 +8,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import pages.EmployeePage.EmployeeNewAccountPage;
+import pages.employeePage.EmployeeNewAccountPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
@@ -40,8 +40,9 @@ public class EmployeeNewAccountStepDef {
         employeeNewAccountPage.password.sendKeys (ConfigurationReader.getProperty ("employee_Password")+Keys.ENTER);
     }
 
-    @Given("Click to Sign in button")
-    public void click_to_Sign_in_button() {
+    @And("user clicks signIn 'button")
+    public void userClicksSignInButton() {
+
         employeeNewAccountPage.signInButton.click ();
     }
 
