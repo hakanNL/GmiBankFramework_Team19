@@ -1,4 +1,4 @@
-
+@gmibank1
  Feature: US_006_ME User info segment (User Settings) should be editable on Homepage
 
   Background: User is on the info segment of own account

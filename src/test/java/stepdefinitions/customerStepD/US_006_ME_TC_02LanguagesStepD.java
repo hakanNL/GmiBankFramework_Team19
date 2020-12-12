@@ -11,7 +11,7 @@ public class US_006_ME_TC_02LanguagesStepD {
     @Then("Verify Language")
     public void verify_Language() {
         Assert.assertEquals("Language",infoPage.languageTitle.getText());
-        System.out.println(infoPage.languageTitle.getText());
+
     }
 
     @Then("click Languages Row button")
