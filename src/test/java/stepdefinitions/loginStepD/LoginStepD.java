@@ -5,6 +5,7 @@ import org.junit.Assert;
 import pages.loginPage.LoginPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class LoginStepD {
 
@@ -13,7 +14,6 @@ public class LoginStepD {
     @Given("user is on the gmibank homepage")
     public void user_is_on_the_gmibank_homepage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("gmi_bank_url"));
-
     }
 
     @Given("user clicks on account-menu button")
@@ -41,22 +41,20 @@ public class LoginStepD {
         loginPage.submitButton.click();
     }
 
-    @Then("verify there should be a sign out button on the account-menu")
-    public void verify_there_should_be_a_sign_out_button_on_the_account_menu() {
-        loginPage.accountMenu.click();
-        Assert.assertTrue(loginPage.signOutButton.isDisplayed());
-    }
-    @Given("user clicks on cancel button")
-    public void user_clicks_on_cancel_button() {
-      //  loginPage.cancelButton.click();
-        System.out.println(loginPage.cancelButton.getText());
-    }
-    @Then("verify if the user cancel to sign in")
-    public void verify_if_the_user_cancel_to_sign_in() {
+    @Then("verify if there is an option to cancel on the sign in page")
+    public void verify_if_there_is_an_option_to_cancel_on_the_sign_in_page() {
+        ReusableMethods.wait(3);
         Assert.assertTrue(loginPage.cancelButton.isDisplayed());
-
-
     }
 
+    @Then("verify if there a success message to login on the page")
+    public void verify_if_there_a_success_message_to_login_on_the_page() {
+        Assert.assertTrue(loginPage.successAlertMessage.getText().isEmpty());
+    }
 
+    @Given("user clicks on sing out button")
+    public void user_clicks_on_sing_out_button() {
+        loginPage.accountMenu.click();
+        loginPage.signOutButton.click();
+    }
 }

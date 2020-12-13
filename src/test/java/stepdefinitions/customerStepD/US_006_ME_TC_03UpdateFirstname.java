@@ -21,7 +21,6 @@ public class US_006_ME_TC_03UpdateFirstname {
     @Then("Verify Settings saved!")
     public void verify_Settings_saved() {
         String message = infoPage.savingMessage.getText();
-        System.out.println(message);
         Assert.assertEquals("Settings saved!",message);
 
     }
