@@ -21,6 +21,7 @@ public class US_10_ON_StepDefinition {
     public void valid_employee_data_must_be_entered_in_User_box_and_Password_box_and_click_Sign_in_button() {
         page.loginUserNameKutusu.sendKeys("Employee9");
         page.loginPasswordKutusu.sendKeys("Employee9");
+        ReusableMethods.waitForClickablility(page.loginSigninButonu, 3);
         page.loginSigninButonu.click();
     }
 
@@ -34,6 +35,7 @@ public class US_10_ON_StepDefinition {
 
     @Given("The employee clicks the Edit button of customer information")
     public void the_employee_clicks_the_Edit_button_of_customer_information() {
+        ReusableMethods.wait(1);
         page.editLinki.click();
     }
     //====================================TC01===========================================
@@ -43,6 +45,7 @@ public class US_10_ON_StepDefinition {
         page.editAltindakiSaveButonu.click();
         ReusableMethods.waitForClickablility(page.gerekliAlanUyarisiHataMesaji, 2);
         ReusableMethods.verifyElementDisplayed(page.gerekliAlanUyarisiHataMesaji);
+        ReusableMethods.wait(2);
         Driver.closeDriver();
     }
     //====================================TC02===========================================
@@ -52,6 +55,7 @@ public class US_10_ON_StepDefinition {
         page.editAltindakiSaveButonu.click();
         ReusableMethods.waitForClickablility(page.gerekliAlanUyarisiHataMesaji, 1);
         ReusableMethods.verifyElementDisplayed(page.gerekliAlanUyarisiHataMesaji);
+        ReusableMethods.wait(2);
         Driver.closeDriver();
     }
     //====================================TC03===========================================
@@ -61,6 +65,7 @@ public class US_10_ON_StepDefinition {
         page.editAltindakiSaveButonu.click();
         ReusableMethods.waitForClickablility(page.gerekliAlanUyarisiHataMesaji, 1);
         ReusableMethods.verifyElementDisplayed(page.gerekliAlanUyarisiHataMesaji);
+        ReusableMethods.wait(2);
         Driver.closeDriver();
     }
     //====================================TC04===========================================
@@ -70,6 +75,7 @@ public class US_10_ON_StepDefinition {
         select.selectByIndex(0);
         page.editAltindakiSaveButonu.click();
         ReusableMethods.verifyElementNotDisplayed(By.xpath("//*[text()='This field is required.']"));
+        ReusableMethods.wait(2);
         Driver.closeDriver();
     }
     //====================================TC05===========================================
@@ -78,6 +84,7 @@ public class US_10_ON_StepDefinition {
         page.stateBox.clear();
         page.editAltindakiSaveButonu.click();
         ReusableMethods.verifyElementNotDisplayed(By.xpath("//*[text()='This field is required.']"));
+        ReusableMethods.wait(2);
         Driver.closeDriver();
     }
     //====================================TC06===========================================
@@ -116,6 +123,7 @@ public class US_10_ON_StepDefinition {
         page.editAltindakiSaveButonu.click();
         ReusableMethods.wait(3);
         Assert.assertEquals(page.popuptakiUpdateOnayYazisi.getText(),"translation-not-found[gmiBankBackendApp.tPCustomer.updated]");
+        ReusableMethods.wait(2);
         Driver.closeDriver();
     }
 }

@@ -23,7 +23,7 @@ public class US_10_US12_ON_Page {
     public WebElement manageCustomerLinki;
     @FindBy(xpath = "//tbody/tr[1]/td")
     //@FindBy(xpath = "//tbody/tr/td[2] | //tbody/tr/td[3]")
-    public List<WebElement> tumMusterilerListesi;
+    public WebElement tumMusterilerListesi;
     @FindBy(xpath = "//tr[1]/td[10]/div/a[1]")
     public WebElement viewLinki;
     @FindBy(xpath = "//tr[1]/td[10]/div/a[2]")
