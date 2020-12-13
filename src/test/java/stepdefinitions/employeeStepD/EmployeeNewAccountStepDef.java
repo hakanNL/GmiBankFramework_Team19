@@ -39,9 +39,8 @@ public class EmployeeNewAccountStepDef {
     public void enter_the_pasword_with_valid_credentail() {
         employeeNewAccountPage.password.sendKeys (ConfigurationReader.getProperty ("employee_Password")+Keys.ENTER);
     }
-
-    @And("user clicks signIn 'button")
-    public void userClicksSignInButton() {
+    @Given("Click to Sign in button")
+    public void click_to_Sign_in_button() {
 
         employeeNewAccountPage.signInButton.click ();
     }
@@ -66,13 +65,13 @@ public class EmployeeNewAccountStepDef {
         Assert.assertTrue (employeeNewAccountPage.invalidFeedback.isDisplayed ());
         employeeNewAccountPage.descriptions.sendKeys (ConfigurationReader.getProperty ("descriptions_text") + Keys.ENTER);
 
-    Driver.closeDriver ();
+    //Driver.closeDriver ();
     }
 
     @Given("Enter a number be dollar to Balance textbox")
     public void enter_a_number_be_dollar_to_Balance_textbox() {
         employeeNewAccountPage.balance.sendKeys (ConfigurationReader.getProperty ("balance")+Keys.ENTER);
-    Driver.closeDriver ();
+    //Driver.closeDriver ();
     }
     @Then("User can select an account type as CHECKING, SAVING, CREDIT_CARD or INVESTING")
     public void user_can_select_an_account_type_as_CHECKING_SAVING_CREDIT_CARD_or_INVESTING() throws InterruptedException {
@@ -91,7 +90,7 @@ public class EmployeeNewAccountStepDef {
         Assert.assertTrue(accountTypeList.get(3).getText().equals("INVESTING"));
 
 
-    Driver.closeDriver ();
+    //Driver.closeDriver ();
     }
     @Then("Account status should be defined as ACTIVE, SUSPENDED or CLOSED")
     public void account_status_should_be_defined_as_ACTIVE_SUSPENDED_or_CLOSED() throws InterruptedException {
@@ -109,7 +108,7 @@ public class EmployeeNewAccountStepDef {
         //Assert.assertTrue(statusList.get(2).getText().equals("CLOSED"));
        // Assert.assertTrue(statusList.get(1).getText().equals("SUSPENDED"));
 
-    Driver.closeDriver ();
+    //Driver.closeDriver ();
     }
 
     @Then("User can select an employee from the drop-down")
@@ -118,7 +117,7 @@ public class EmployeeNewAccountStepDef {
 
 
         employeeNewAccountPage.employee.click ();
-        Driver.closeDriver ();
+        //Driver.closeDriver ();
     }
 
 

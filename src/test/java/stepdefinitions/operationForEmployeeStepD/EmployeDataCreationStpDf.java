@@ -40,9 +40,9 @@ public class EmployeDataCreationStpDf {
     public void entersPassword() {
         employeeNewAccountPage.password.sendKeys (ConfigurationReader.getProperty ("date_password")+Keys.ENTER);
     }
+    @And("user click signIn button")
+    public void userClickSignInButton() {
 
-    @Given("user clicks signIn button")
-    public void user_clicks_signIn_button() {
        employeeNewAccountPage.signInButton.click ();
     }
     @Then("user clicks myOperations")
@@ -160,6 +160,8 @@ public class EmployeDataCreationStpDf {
         //Assert.assertFalse (employeeNewAccountPage.zelle.isSelected ());
 
     }
+
+
 
 
 /*
