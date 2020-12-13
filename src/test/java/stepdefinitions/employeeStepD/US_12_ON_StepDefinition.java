@@ -3,9 +3,7 @@ package stepdefinitions.employeeStepD;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
 import pages.employeePage.US_10_US12_ON_Page;
-import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US_12_ON_StepDefinition {
@@ -15,8 +13,8 @@ public class US_12_ON_StepDefinition {
     @Given("The employee verifies that a list of all customers who have filled in their account information is seen.")
     public void the_employee_verifies_that_a_list_of_all_customers_who_have_filled_in_their_account_information_is_seen() {
         ReusableMethods.verifyElementDisplayed(page.tumMusterilerListesi);
-        ReusableMethods.wait(2);
-        Driver.closeDriver();
+        page.employeeDropdown.click();
+        page.signOutLinki.click();
     }
     //============================TC02====================================
     @Given("Employee sees View customer information button and clicked")
@@ -31,16 +29,18 @@ public class US_12_ON_StepDefinition {
     public void the_employee_verifies_that_sees_the_button_on_the_customer_information_page() {
         ReusableMethods.wait(1);
         ReusableMethods.verifyElementDisplayed(page.viewdekiEditLinki);
-        ReusableMethods.wait(2);
-        Driver.closeDriver();
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        page.signOutLinki.click();
     }
     //============================TC03====================================
     @Given("The Employee verifies that sees the Edit button of customer information.")
     public void the_Employee_verifies_that_sees_the_Edit_button_of_customer_information() {
         ReusableMethods.wait(1);
         ReusableMethods.verifyElementDisplayed(page.editLinki);
-        ReusableMethods.wait(2);
-        Driver.closeDriver();
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        page.signOutLinki.click();
     }
     //============================TC04====================================
     @Given("The employee makes changes in some part of the customer information and clicks the Save button.")
@@ -52,10 +52,11 @@ public class US_12_ON_StepDefinition {
 
     @Then("The employee verifies that it has seen the message -translation-not-found [gmiBankBackendApp.tPCustomer.updated]-")
     public void the_employee_verifies_that_it_has_seen_the_message_translation_not_found_gmiBankBackendApp_tPCustomer_updated() {
-        ReusableMethods.wait(3);
-        Assert.assertEquals(page.popuptakiUpdateOnayYazisi.getText(),"translation-not-found[gmiBankBackendApp.tPCustomer.updated]");
         ReusableMethods.wait(2);
-        Driver.closeDriver();
+        Assert.assertEquals(page.popuptakiUpdateOnayYazisi.getText(),"translation-not-found[gmiBankBackendApp.tPCustomer.updated]");
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        page.signOutLinki.click();
     }
     //============================TC05====================================
     @Given("The employee clicks the Delete button of customer information")
@@ -78,10 +79,11 @@ public class US_12_ON_StepDefinition {
 
     @Then("The employee verifies that has seen the -translation-not-found [gmiBankBackendApp.tPCustomer.deleted]- message.")
     public void the_employee_verifies_that_has_seen_the_message() {
-        ReusableMethods.wait(3);
-        Assert.assertEquals(page.popuptakiDeleteOnayYazisi.getText(),"translation-not-found[gmiBankBackendApp.tPCustomer.deleted]");
         ReusableMethods.wait(2);
-        Driver.closeDriver();
+        Assert.assertEquals(page.popuptakiDeleteOnayYazisi.getText(),"translation-not-found[gmiBankBackendApp.tPCustomer.deleted]");
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        page.signOutLinki.click();
     }
 }
 

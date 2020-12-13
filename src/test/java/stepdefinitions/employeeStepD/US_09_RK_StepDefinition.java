@@ -4,13 +4,16 @@ import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import org.testng.asserts.SoftAssert;
 import pages.employeePage.US_009_RK_Page;
+import pages.employeePage.US_011_RK_Page;
 import pages.registrationPage.US_002_ED_Page;
 import utilities.ConfigurationReader;
+import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US_09_RK_StepDefinition {
 
     US_002_ED_Page registerPage = new US_002_ED_Page();
+    US_011_RK_Page page = new US_011_RK_Page();
 
     @Given("User should see SSN box and sendd {string}")
     public void user_should_see_SSN_box_and_sendd(String string) {
@@ -41,7 +44,8 @@ public class US_09_RK_StepDefinition {
 
     @Given("Acilan sayfada Create a new Customer butonu gorulmeli ve tiklanmali.")
     public void acilan_sayfada_Create_a_new_Customer_butonu_gorulmeli_ve_tiklanmali() {
-    Page.Create_N_Customer.click();
+    ReusableMethods.wait(1);
+        Page.Create_N_Customer.click();
     }
 
 
@@ -64,6 +68,9 @@ public class US_09_RK_StepDefinition {
         Assert.assertFalse(Page.M_Phone_Nu.getAttribute("value").isEmpty());
         ReusableMethods.wait(2);
         Assert.assertFalse(Page.Adress.getAttribute("value").isEmpty());
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        page.signOutLinki.click();
 
     }
 

@@ -22,8 +22,13 @@ public class US_10_US12_ON_Page {
     @FindBy(xpath = "//*[text()='Manage Customers']")
     public WebElement manageCustomerLinki;
     @FindBy(xpath = "//tbody/tr[1]/td")
-    //@FindBy(xpath = "//tbody/tr/td[2] | //tbody/tr/td[3]")
     public WebElement tumMusterilerListesi;
+    @FindBy(id = "account-menu")
+    public WebElement employeeDropdown;
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[4]")
+    public WebElement signOutLinki;
+    @FindBy(xpath ="//div[@class='Toastify__toast-body']")
+    public  WebElement toaster;
     @FindBy(xpath = "//tr[1]/td[10]/div/a[1]")
     public WebElement viewLinki;
     @FindBy(xpath = "//tr[1]/td[10]/div/a[2]")

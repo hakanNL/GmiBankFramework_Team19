@@ -1,4 +1,4 @@
-@regression
+@gmibank
 @US10US12
 @US12_ON
   Feature: US012 An Employee can manage Customer

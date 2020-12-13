@@ -45,8 +45,10 @@ public class US_10_ON_StepDefinition {
         page.editAltindakiSaveButonu.click();
         ReusableMethods.waitForClickablility(page.gerekliAlanUyarisiHataMesaji, 2);
         ReusableMethods.verifyElementDisplayed(page.gerekliAlanUyarisiHataMesaji);
-        ReusableMethods.wait(2);
-        Driver.closeDriver();
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        ReusableMethods.wait(1);
+        page.signOutLinki.click();
     }
     //====================================TC02===========================================
     @Then("The -Address- box should be left blank and at the bottom of the box -This field is required.- should popup the alert")
@@ -55,8 +57,10 @@ public class US_10_ON_StepDefinition {
         page.editAltindakiSaveButonu.click();
         ReusableMethods.waitForClickablility(page.gerekliAlanUyarisiHataMesaji, 1);
         ReusableMethods.verifyElementDisplayed(page.gerekliAlanUyarisiHataMesaji);
-        ReusableMethods.wait(2);
-        Driver.closeDriver();
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        ReusableMethods.wait(1);
+        page.signOutLinki.click();
     }
     //====================================TC03===========================================
     @Then("The -City- box should be left blank and at the bottom of the box -This field is required.- should popup the alert")
@@ -65,8 +69,10 @@ public class US_10_ON_StepDefinition {
         page.editAltindakiSaveButonu.click();
         ReusableMethods.waitForClickablility(page.gerekliAlanUyarisiHataMesaji, 1);
         ReusableMethods.verifyElementDisplayed(page.gerekliAlanUyarisiHataMesaji);
-        ReusableMethods.wait(2);
-        Driver.closeDriver();
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        ReusableMethods.wait(1);
+        page.signOutLinki.click();
     }
     //====================================TC04===========================================
     @Given("The Country box should be left blank and at the bottom of the box -This field is required.- should popup the alert")
@@ -75,8 +81,10 @@ public class US_10_ON_StepDefinition {
         select.selectByIndex(0);
         page.editAltindakiSaveButonu.click();
         ReusableMethods.verifyElementNotDisplayed(By.xpath("//*[text()='This field is required.']"));
-        ReusableMethods.wait(2);
-        Driver.closeDriver();
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        ReusableMethods.wait(1);
+        page.signOutLinki.click();
     }
     //====================================TC05===========================================
     @Given("The State box should be left blank and at the bottom of the box This field is required. should popup the alert")
@@ -84,8 +92,10 @@ public class US_10_ON_StepDefinition {
         page.stateBox.clear();
         page.editAltindakiSaveButonu.click();
         ReusableMethods.verifyElementNotDisplayed(By.xpath("//*[text()='This field is required.']"));
-        ReusableMethods.wait(2);
-        Driver.closeDriver();
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        ReusableMethods.wait(1);
+        page.signOutLinki.click();
     }
     //====================================TC06===========================================
     @Given("Valid data is entered into the Zip Code box {string}")
@@ -121,9 +131,11 @@ public class US_10_ON_StepDefinition {
     @Then("-This field is required.- It should be verified that the text is not popup.")
     public void this_field_is_required_It_should_be_verified_that_the_text_is_not_popup() {
         page.editAltindakiSaveButonu.click();
-        ReusableMethods.wait(3);
+        ReusableMethods.wait(1);
         Assert.assertEquals(page.popuptakiUpdateOnayYazisi.getText(),"translation-not-found[gmiBankBackendApp.tPCustomer.updated]");
-        ReusableMethods.wait(2);
-        Driver.closeDriver();
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        ReusableMethods.wait(1);
+        page.signOutLinki.click();
     }
 }

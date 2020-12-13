@@ -14,8 +14,12 @@ public class US_011_RK_StepDefination {
 
     @Given("user tarih kayit zamanindan onceki bir tarihi alir")
     public void user_tarih_kayit_zamanindan_onceki_bir_tarihi_alir() {
-        page.date.sendKeys("27/12/2019 18:50");
+        page.date.sendKeys("2/7/2019 18:50");
 
+    }
+    @Given("user tarih kayit zamanindan sonraki bir tarihe alir")
+    public void user_tarih_kayit_zamanindan_sonraki_bir_tarihe_alir() {
+        page.date.sendKeys("2/7/2021 18:50");
     }
 
     @Given("Saved butonuna tiklar.")
@@ -27,47 +31,54 @@ public class US_011_RK_StepDefination {
     @Given("user kaydi gerceklestigini gormeli")
     public void user_kaydi_gerceklestigini_gormeli() {
         //ReusableMethods.verifyElementDisplayed(page.cheking);
-        ReusableMethods.wait(3);
+        ReusableMethods.wait(2);
 
-        //Assert.assertTrue(page.cheking.isDisplayed());
-        ReusableMethods.verifyElementNotDisplayed(By.xpath("//*[contains(text(),'Internal server error.')]"));
+        Assert.assertTrue(page.toaster.isDisplayed());
+        //ReusableMethods.verifyElementNotDisplayed(By.xpath("//*[contains(text(),'Internal server error.')]"));
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        ReusableMethods.wait(1);
+        page.signOutLinki.click();
     }
     //-----------------------------------------------------------------------------------------------
 
 
     @Given("user Create Date in formati Aygun yil saat dakika olarak gorulmeli.")
     public void user_Create_Date_in_formati_Aygun_yil_saat_dakika_olarak_gorulmeli() {
-        ReusableMethods.wait(3);
+        ReusableMethods.wait(2);
         System.out.println(page.date.getAttribute("value"));
-        Assert.assertTrue(page.date.getAttribute("value").contains("2020-12-12T00:00"));
-        Driver.closeDriver();
+        Assert.assertFalse(page.date.getAttribute("value").contains("2020-12-12T00:00"));
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        ReusableMethods.wait(1);
+        page.signOutLinki.click();
     }
 //------------------------------------------------------------------------------------------------
 
     @Given("user secilen musteriye ait satirdki View butonuna tiklar")
     public void user_secilen_musteriye_ait_satirdki_View_butonuna_tiklar() {
         page.classview.click();
-
-
-
     }
 
     @Then("user bilgilerin tamaminin doldurulmus oldugu gorulur")
     public void user_bilgilerin_tamaminin_doldurulmus_oldugu_gorulur() {
 
-        ReusableMethods.wait(1);
+        ReusableMethods.wait(3);
         Assert.assertTrue(page.Firstnameview.isDisplayed());
-        ReusableMethods.wait(1);
+        ReusableMethods.wait(3);
         Assert.assertTrue(page.Addressview.isDisplayed());
-        ReusableMethods.wait(1);
+        ReusableMethods.wait(3);
         Assert.assertTrue(page.Emailmeview.isDisplayed());
-        ReusableMethods.wait(1);
+        ReusableMethods.wait(3);
         Assert.assertTrue(page.Lastnameview.isDisplayed());
-        ReusableMethods.wait(1);
+        ReusableMethods.wait(3);
         Assert.assertTrue(page.MobilePhoneNumberview.isDisplayed());
-        ReusableMethods.wait(1);
+        ReusableMethods.wait(3);
         Assert.assertTrue(page.ZipCodeview.isDisplayed());
-        Driver.closeDriver();
+        ReusableMethods.wait(2);
+        page.employeeDropdown.click();
+        ReusableMethods.wait(2);
+        page.signOutLinki.click();
 
     }
 
@@ -90,7 +101,10 @@ public class US_011_RK_StepDefination {
     public void user_hesap_bilgilsrinin_oldugu_sayfada_Accaunt_yazisini_dogrular() {
         ReusableMethods.wait(1);
         Assert.assertTrue(page.Acauntyazisi.isDisplayed());
-        Driver.closeDriver();
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        ReusableMethods.wait(1);
+        page.signOutLinki.click();
     }
 
 //-----------------------------------------------------------------------------------------------
@@ -128,7 +142,10 @@ public class US_011_RK_StepDefination {
     public void user_kayit_basarili_yazisini_gorur() {
         ReusableMethods.wait(2);
         Assert.assertTrue(page.toster.isDisplayed());
-        Driver.closeDriver();
+        ReusableMethods.wait(1);
+        page.employeeDropdown.click();
+        ReusableMethods.wait(1);
+        page.signOutLinki.click();
     }
 
 

@@ -17,8 +17,8 @@ public class US_011_RK_Page {
    @FindBy(id="save-entity")
     public  WebElement saved;
 
-   @FindBy(xpath ="//*[contains(text(),'Internal server error.')]")
-    public  WebElement cheking;
+   @FindBy(xpath ="//div[@class='Toastify__toast-body']")
+    public  WebElement toaster;
 
     @FindBy(xpath ="//dl/dd[2]")
     public WebElement Firstnameview;
@@ -64,6 +64,11 @@ public class US_011_RK_Page {
 
      @FindBy(xpath = "//div[@class='Toastify__toast-body']" )
      public WebElement toster ;
+     @FindBy(id = "account-menu")
+     public WebElement employeeDropdown;
+
+     @FindBy(xpath = "//a[@href='/logout']")
+     public WebElement signOutLinki;
 
 
 }
