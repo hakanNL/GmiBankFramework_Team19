@@ -30,6 +30,7 @@ public class US_015_SO_StepD {
 
     @Given("Click on the My Operations button")
     public void click_on_the_My_Operations_button() {
+        ReusableMethods.wait(3);
      page.My_Operations.click();
     }
 

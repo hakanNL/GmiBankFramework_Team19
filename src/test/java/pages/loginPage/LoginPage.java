@@ -14,8 +14,11 @@ public class LoginPage {
     @FindBy(id = "account-menu")
     public WebElement accountMenu;
 
+
     @FindBy(id = "login-item")
+
     public WebElement signInButton;
+
 
     @FindBy(name = "username")
     public WebElement username;

@@ -5,6 +5,7 @@ import org.testng.Assert;
 import pages.customerPage.US_008_PasswordPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class PasswordSegmentStepDef {
     US_008_PasswordPage passwordPage = new US_008_PasswordPage();
@@ -21,6 +22,7 @@ public class PasswordSegmentStepDef {
 
     @And("3Click to Sign in")
     public void clickToSignIn() {
+        ReusableMethods.wait(4);
         passwordPage.signIn.click();
     }
 

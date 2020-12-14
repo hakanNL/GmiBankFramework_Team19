@@ -1,23 +1,16 @@
 package stepdefinitions.operationForEmployeeStepD;
-
-
-import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.eo.Se;
-import org.apache.commons.math3.ml.distance.EarthMoversDistance;
-import org.checkerframework.checker.units.qual.C;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.SourceType;
 import org.openqa.selenium.support.ui.Select;
 import pages.employeePage.EmployeeNewAccountPage;
 import utilities.ConfigurationReader;
 import utilities.DateUtil;
 import utilities.Driver;
-import utilities.ExcelUtil;
+import utilities.ReusableMethods;
 
 import java.util.Date;
 
@@ -27,8 +20,8 @@ public class EmployeDataCreationStpDf {
     Actions actions = new Actions(Driver.getDriver());
     @Then("user signOut from Website")
     public void user_signOut_from_Website() {
-    employeeNewAccountPage.outDropDown.click ();
-    employeeNewAccountPage.signOut.click ();
+        employeeNewAccountPage.outDropDown.click ();
+        employeeNewAccountPage.signOut.click ();
     }
 
     @And("enters  username")
@@ -40,10 +33,11 @@ public class EmployeDataCreationStpDf {
     public void entersPassword() {
         employeeNewAccountPage.password.sendKeys (ConfigurationReader.getProperty ("date_password")+Keys.ENTER);
     }
+    @And("user click signIn button")
+    public void userClickSignInButton() {
+        ReusableMethods.wait(3);
 
-    @Given("user clicks signIn button")
-    public void user_clicks_signIn_button() {
-       employeeNewAccountPage.signInButton.click ();
+        employeeNewAccountPage.signInButton.click ();
     }
     @Then("user clicks myOperations")
     public void userClicksMyOperations() {
@@ -124,12 +118,12 @@ public class EmployeDataCreationStpDf {
 
     @Given("user customer send a time {string} and user click tab")
     public void user_customer_send_a_time_and_user_click_tab(String string) {
-       employeeNewAccountPage.customerDate.sendKeys (string+Keys.TAB);
+        employeeNewAccountPage.customerDate.sendKeys (string+Keys.TAB);
     }
 
     @Given("user customer click tab")
     public void user_customer_click_tab() {
-       actions.sendKeys (Keys.TAB).perform ();
+        actions.sendKeys (Keys.TAB).perform ();
     }
 
     @Given("user customer verifies valid data entry to Create Date box")
@@ -162,6 +156,8 @@ public class EmployeDataCreationStpDf {
     }
 
 
+
+
 /*
     @Given("user customer verifies that there is no allert message related to Zelle box")
     public void user_customer_verifies_that_there_is_no_allert_message_related_to_Zelle_box() {
@@ -169,8 +165,6 @@ public class EmployeDataCreationStpDf {
         String valueAfterClick = employeeNewAccountPage.zelle.getAttribute ("value");
         System.out.println (valueAfterClick);
         Assert.assertEquals (valueAfterClick,"true");
-
     }
-
  */
 }

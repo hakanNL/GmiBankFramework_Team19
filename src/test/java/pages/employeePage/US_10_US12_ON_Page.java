@@ -1,16 +1,12 @@
 package pages.employeePage;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
-import java.util.List;
-
 public class US_10_US12_ON_Page {
     public US_10_US12_ON_Page(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
     @FindBy(name = "username")
     public WebElement loginUserNameKutusu;
     @FindBy(name = "password")
@@ -22,8 +18,13 @@ public class US_10_US12_ON_Page {
     @FindBy(xpath = "//*[text()='Manage Customers']")
     public WebElement manageCustomerLinki;
     @FindBy(xpath = "//tbody/tr[1]/td")
-    //@FindBy(xpath = "//tbody/tr/td[2] | //tbody/tr/td[3]")
-    public List<WebElement> tumMusterilerListesi;
+    public WebElement tumMusterilerListesi;
+    @FindBy(id = "account-menu")
+    public WebElement employeeDropdown;
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[4]")
+    public WebElement signOutLinki;
+    @FindBy(xpath ="//div[@class='Toastify__toast-body']")
+    public  WebElement toaster;
     @FindBy(xpath = "//tr[1]/td[10]/div/a[1]")
     public WebElement viewLinki;
     @FindBy(xpath = "//tr[1]/td[10]/div/a[2]")
@@ -36,7 +37,6 @@ public class US_10_US12_ON_Page {
     public WebElement popuptakiDeleteOnayYazisi;
     @FindBy(xpath = "//div[.='translation-not-found[gmiBankBackendApp.tPCustomer.updated]']")
     public WebElement popuptakiUpdateOnayYazisi;
-
     //@FindBy(xpath = "//div[.='Internal server error.']")
     //public WebElement popuptakiDeleteOnayYazisi;
     @FindBy(xpath = "//*[@class='btn btn-primary']")
