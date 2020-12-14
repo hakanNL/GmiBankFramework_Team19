@@ -18,11 +18,14 @@ public class LoginStepD {
 
     @Given("user clicks on account-menu button")
     public void user_clicks_on_account_menu_button() {
+        ReusableMethods.wait(3);
+
         loginPage.accountMenu.click();
     }
 
     @Given("user clicks on sing in button")
     public void user_clicks_on_sing_in_button() {
+        ReusableMethods.wait(4);
         loginPage.signInButton.click();
     }
 

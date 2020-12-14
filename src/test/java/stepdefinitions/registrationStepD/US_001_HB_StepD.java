@@ -18,6 +18,7 @@ public class US_001_HB_StepD {
 
     @Given("Kullanici SSN text box una gecerli bir gecerli_SSN girer")
     public void kullanici_SSN_text_box_una_gecerli_bir_girer() {
+
         us_01_hb_page.ssnTextBox.sendKeys(ConfigurationReader.getProperty("gecerli_SSN"));
     }
 

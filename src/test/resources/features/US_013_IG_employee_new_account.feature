@@ -1,10 +1,9 @@
-@US13
+@gmibank
 Feature: An Employee can create a new Account
 
- Background: Employee gmibank homepage
-   Given Go to gmibank.com home page
-   And Click to User Account Menu and Click to SignIn
-
+  Background: Employee gmibank homepage
+    Given Go to gmibank.com home page
+    And Click to User Account Menu and Click to SignIn
 
 
   @US13TC01
@@ -61,5 +60,4 @@ Feature: An Employee can create a new Account
     And Click to My Operations drop down menu and Click to Manage Accounts then click to Create New Account
     Then User can select an employee from the drop-down
     Then user signOut from Website
-
 

@@ -1,4 +1,4 @@
-@regression
+@gmibank
 @US10US12
 @US12_ON
   Feature: US012 An Employee can manage Customer
@@ -16,7 +16,7 @@
       Then The employee verifies that sees the Edit button on the customer information page.
     @US12TC03
     Scenario: TC03 There should be an Edit button where all customer information can be populated
-      And The Employee verifies that she sees the Edit button of customer information.
+      And The Employee verifies that sees the Edit button of customer information.
     @US12TC04
     Scenario: TC04 The Edit portal can allow user to update the user info
       And The employee clicks the Edit button of customer information

@@ -1,4 +1,4 @@
-@regression
+@gmibank
 @US10US12
 @US10_ON
   Feature: US10 The employee's transactions at the customer address

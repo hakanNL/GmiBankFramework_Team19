@@ -1,4 +1,4 @@
-@US_005
+@gmibank
 Feature: US_005_YU_Login_page_should_not_be_accessible_with_invalid_credentials.feature
 
   Background: User is on the gmibank homepage

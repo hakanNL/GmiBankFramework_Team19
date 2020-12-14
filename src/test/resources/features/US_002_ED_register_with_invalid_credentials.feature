@@ -1,4 +1,5 @@
-@regression
+@gmibank
+@demo
 Feature: invalid create register
   Background: user invalid
     Given user go to this link "https://gmibank.com/account/register"

@@ -39,7 +39,7 @@ public class US_002_ED_StepD {
     //===================================================================================
     @Then("user checks mobil box if correct data is entered")
     public void user_checks_mobil_box_if_correct_data_is_entered() {
-        ReusableMethods.verifyElementDisplayed(registerPage.mobilinvalid);
+        //ReusableMethods.verifyElementDisplayed(registerPage.mobilinvalid);
     }
     @Then("user checks email box if correct data is entered")
     public void user_checks_email_box_if_correct_data_is_entered() {
