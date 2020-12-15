@@ -156,12 +156,7 @@ public class EmployeDataCreationStpDf {
 
     }
 
-Resolving conflicts between hakan1 and master and committing changes  hakan1
-
-
-
-/*
-    @Given("user customer verifies that there is no allert message related to Zelle box")
+  /*@Given("user customer verifies that there is no allert message related to Zelle box")
     public void user_customer_verifies_that_there_is_no_allert_message_related_to_Zelle_box() {
         employeeNewAccountPage.saveButton.click ();
         String valueAfterClick = employeeNewAccountPage.zelle.getAttribute ("value");
