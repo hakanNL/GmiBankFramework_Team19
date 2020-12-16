@@ -1,4 +1,4 @@
-@gmibank1
+@gmibank
 Feature: US_007_ME System should not allow to make updates with invalid credentials
 
   Background: User is on the info segment of own account

@@ -71,9 +71,9 @@ public class US_12_ON_StepDefinition {
     }
     @Then("The employee verifies that has seen the -translation-not-found [gmiBankBackendApp.tPCustomer.deleted]- message.")
     public void the_employee_verifies_that_has_seen_the_message() {
-        ReusableMethods.wait(4);
+        ReusableMethods.wait(2);
         Assert.assertEquals(page.popuptakiDeleteOnayYazisi.getText(),"translation-not-found[gmiBankBackendApp.tPCustomer.deleted]");
-        ReusableMethods.wait(3);
+        ReusableMethods.wait(2);
         page.employeeDropdown.click();
         page.signOutLinki.click();
     }

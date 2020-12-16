@@ -26,16 +26,16 @@ public class EmployeDataCreationStpDf {
 
     @And("enters  username")
     public void entersUsername() {
-        employeeNewAccountPage.username.sendKeys (ConfigurationReader.getProperty ("date_username")+Keys.ENTER);
+        employeeNewAccountPage.username.sendKeys (ConfigurationReader.getProperty ("date_username"));
     }
 
     @And("enters  password")
     public void entersPassword() {
-        employeeNewAccountPage.password.sendKeys (ConfigurationReader.getProperty ("date_password")+Keys.ENTER);
+        employeeNewAccountPage.password.sendKeys (ConfigurationReader.getProperty ("date_password"));
     }
     @And("user click signIn button")
     public void userClickSignInButton() {
-        ReusableMethods.wait(3);
+        ReusableMethods.wait(1);
 
         employeeNewAccountPage.signInButton.click ();
 
@@ -112,7 +112,7 @@ public class EmployeDataCreationStpDf {
     @Given("user customer send a date {string} and click tab")
     public void user_customer_send_a_date_and_click_tab(String string) throws InterruptedException {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep (3000);
+        Thread.sleep (2000);
         employeeNewAccountPage.customerDate.sendKeys (string+Keys.TAB);
 
     }
@@ -137,8 +137,9 @@ public class EmployeDataCreationStpDf {
     @Given("user customer click user box and select a user")
     public void user_customer_click_user_box_and_select_a_user() throws InterruptedException {
         Select select = new Select (employeeNewAccountPage.userDropDown);
+        Thread.sleep (1000);
         select.selectByIndex (4);
-        Thread.sleep (4000);
+
     }
 
     @Given("user customer verifies valid selection of user")
@@ -152,6 +153,7 @@ public class EmployeDataCreationStpDf {
         actions.sendKeys (Keys.PAGE_DOWN).perform ();
         employeeNewAccountPage.zelle.click ();
         Thread.sleep (1000);
+        Driver.closeDriver();
         //Assert.assertFalse (employeeNewAccountPage.zelle.isSelected ());
 
     }

@@ -25,28 +25,27 @@ public class EmployeeNewAccountStepDef {
 
     @And("Click to User Account Menu and Click to SignIn")
     public void clickToUserAccountMenuAndClickToSignIn() {
-        ReusableMethods.wait(2);
+        ReusableMethods.wait(1);
         employeeNewAccountPage.signinDropDown.click();
-        ReusableMethods.wait(5);
+        ReusableMethods.wait(1);
 
         employeeNewAccountPage.sigIn.click();
     }
 
     @Given("Enter the username with valid credentail")
     public void enter_the_username_with_valid_credentail() {
-        employeeNewAccountPage.username.sendKeys(ConfigurationReader.getProperty("employee_Username") + Keys.ENTER);
+        employeeNewAccountPage.username.sendKeys(ConfigurationReader.getProperty("employee_Username") );
     }
 
     @Given("Enter the pasword with valid credentail")
     public void enter_the_pasword_with_valid_credentail() {
-        employeeNewAccountPage.password.sendKeys(ConfigurationReader.getProperty("employee_Password") + Keys.ENTER);
+        ReusableMethods.wait(1);
+        employeeNewAccountPage.password.sendKeys(ConfigurationReader.getProperty("employee_Password") );
     }
 
     @Given("Click to Sign in button")
     public void click_to_Sign_in_button() {
-        ReusableMethods.wait(2);
-
-
+        ReusableMethods.wait(1);
         employeeNewAccountPage.signInButton.click();
     }
 
@@ -55,7 +54,7 @@ public class EmployeeNewAccountStepDef {
         employeeNewAccountPage.myOperations.click();
         employeeNewAccountPage.manageAccount.click();
         employeeNewAccountPage.createNewAccount.click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 
     @Given("Click for explanations Do not write data to TextBox")
@@ -87,13 +86,13 @@ public class EmployeeNewAccountStepDef {
         List<WebElement> accountTypeList = select.getOptions();
         select.selectByValue("CHECKING");
         Assert.assertTrue(accountTypeList.get(0).getText().equals("CHECKING"));
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         select.selectByValue("SAVING");
         Assert.assertTrue(accountTypeList.get(1).getText().equals("SAVING"));
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         select.selectByValue("CREDIT_CARD");
         Assert.assertTrue(accountTypeList.get(2).getText().equals("CREDIT_CARD"));
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         select.selectByValue("INVESTING");
         Assert.assertTrue(accountTypeList.get(3).getText().equals("INVESTING"));
 
@@ -110,10 +109,10 @@ public class EmployeeNewAccountStepDef {
         List<WebElement> statusList = select.getOptions();
         select.selectByIndex(0);
         //Assert.assertTrue(statusList.get(0).getText().equals("ACTIVE"));
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         select.selectByIndex(1);
         //
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         select.selectByIndex(2);
         //Assert.assertTrue(statusList.get(2).getText().equals("CLOSED"));
         // Assert.assertTrue(statusList.get(1).getText().equals("SUSPENDED"));

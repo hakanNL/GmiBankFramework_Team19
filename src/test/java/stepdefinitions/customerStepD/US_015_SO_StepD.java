@@ -30,18 +30,19 @@ public class US_015_SO_StepD {
 
     @Given("Click on the My Operations button")
     public void click_on_the_My_Operations_button() {
-        ReusableMethods.wait(3);
+        ReusableMethods.wait(1);
      page.My_Operations.click();
     }
 
     @Given("Click on the My Accounts button")
     public void click_on_the_My_Accounts_button() {
+        ReusableMethods.wait(2);
         page.My_Accounts.click();
     }
 
     @Given("Click on the View Transaction button")
     public void click_on_the_View_Transaction_button() {
-        ReusableMethods.wait(3);
+        ReusableMethods.wait(1);
        page.View_Transaction1.click();
 
     }
@@ -129,7 +130,7 @@ public class US_015_SO_StepD {
 
     @Then("It should be checked that {string} is displayed.")
     public void it_should_be_checked_that_is_displayed(String string) {
-        ReusableMethods.wait(3);
+        ReusableMethods.wait(2);
         System.out.println(page.Transfer_successfull.getText());
         ReusableMethods.verifyElementDisplayed(page.Transfer_successfull);
         //Assert.assertEquals(string, page.Transfer_successfull.getText());
