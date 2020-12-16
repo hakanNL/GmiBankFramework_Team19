@@ -37,22 +37,22 @@ public class US_006_MEInfoSegmentStepD {
 
     @Then("Verify on First Name field {string}")
     public void verify_on_First_Name_field(String string) {
-        Assert.assertEquals("Mehmet1Customer",infoPage.UserInfoFirstName.getAttribute("value"));
+        Assert.assertEquals(string,infoPage.UserInfoFirstName.getAttribute("value"));
     }
 
     @Then("Verify on Last Name field {string}")
     public void verify_on_Last_Name_field(String string) {
-        Assert.assertEquals("Ekinci",infoPage.UserInfoLastName.getAttribute("value"));
+        Assert.assertEquals(string,infoPage.UserInfoLastName.getAttribute("value"));
     }
 
     @Then("Verify on Email field {string}")
     public void verify_on_Email_field(String string) {
-        Assert.assertEquals("izmirsh12@gmail.com",infoPage.UserInfoEmail.getAttribute("value"));
+        Assert.assertEquals(string,infoPage.UserInfoEmail.getAttribute("value"));
     }
 
     @Then("Verify on Language field {string}")
     public void verify_on_Language_field(String string)  {
-        Assert.assertTrue(infoPage.UserInfoLanguage.getText().contains("English"));
+        Assert.assertTrue(infoPage.UserInfoLanguage.getText().contains(string));
     }
 
     @Then("click Sign out button")
