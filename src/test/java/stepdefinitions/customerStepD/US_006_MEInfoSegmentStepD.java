@@ -7,7 +7,6 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.customerPage.US_006_MEInfoSegmentPage;
 import pages.loginPage.LoginPage;
-import utilities.ReusableMethods;
 
 public class US_006_MEInfoSegmentStepD {
 
@@ -28,8 +27,6 @@ public class US_006_MEInfoSegmentStepD {
 
     @When("click User Name button")
     public void click_User_Name_button() {
-        ReusableMethods.wait(2);
-
         infoPage.infoAccountMenu.click();
     }
 
@@ -40,8 +37,7 @@ public class US_006_MEInfoSegmentStepD {
 
     @Then("Verify on First Name field {string}")
     public void verify_on_First_Name_field(String string) {
-        ReusableMethods.wait(3);
-        Assert.assertEquals(string,infoPage.UserInfoFirstName.getAttribute("value"));
+        Assert.assertEquals("Mehmet1Customer",infoPage.UserInfoFirstName.getAttribute("value"));
     }
 
     @Then("Verify on Last Name field {string}")
