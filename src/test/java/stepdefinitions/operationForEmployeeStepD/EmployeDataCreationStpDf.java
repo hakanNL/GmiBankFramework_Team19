@@ -137,7 +137,7 @@ public class EmployeDataCreationStpDf {
     @Given("user customer click user box and select a user")
     public void user_customer_click_user_box_and_select_a_user() throws InterruptedException {
         Select select = new Select (employeeNewAccountPage.userDropDown);
-        Thread.sleep (1000);
+        ReusableMethods.wait(3);
         select.selectByIndex (4);
 
     }
