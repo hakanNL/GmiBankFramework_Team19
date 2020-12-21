@@ -6,7 +6,6 @@ Feature: An Employee can create a new Account
     And Click to User Account Menu and Click to SignIn
 
 
-
   @US13TC01
   Scenario:US13TC01 User should create a description for the new account and it cannot be blank
 
@@ -61,3 +60,4 @@ Feature: An Employee can create a new Account
     And Click to My Operations drop down menu and Click to Manage Accounts then click to Create New Account
     Then User can select an employee from the drop-down
     Then user signOut from Website
+

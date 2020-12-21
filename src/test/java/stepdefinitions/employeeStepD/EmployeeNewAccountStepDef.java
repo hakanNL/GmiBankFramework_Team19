@@ -46,6 +46,7 @@ public class EmployeeNewAccountStepDef {
     public void click_to_Sign_in_button() {
         ReusableMethods.wait(2);
 
+
         employeeNewAccountPage.signInButton.click();
     }
 
@@ -70,12 +71,14 @@ public class EmployeeNewAccountStepDef {
         employeeNewAccountPage.descriptions.sendKeys(ConfigurationReader.getProperty("descriptions_text") + Keys.ENTER);
 
         //Driver.closeDriver ();
+
     }
 
     @Given("Enter a number be dollar to Balance textbox")
     public void enter_a_number_be_dollar_to_Balance_textbox() {
         employeeNewAccountPage.balance.sendKeys(ConfigurationReader.getProperty("balance") + Keys.ENTER);
         //Driver.closeDriver ();
+
     }
 
     @Then("User can select an account type as CHECKING, SAVING, CREDIT_CARD or INVESTING")
@@ -96,6 +99,7 @@ public class EmployeeNewAccountStepDef {
 
 
         //Driver.closeDriver ();
+
     }
 
     @Then("Account status should be defined as ACTIVE, SUSPENDED or CLOSED")
@@ -115,6 +119,7 @@ public class EmployeeNewAccountStepDef {
         // Assert.assertTrue(statusList.get(1).getText().equals("SUSPENDED"));
 
         //Driver.closeDriver ();
+
     }
 
     @Then("User can select an employee from the drop-down")
@@ -122,6 +127,7 @@ public class EmployeeNewAccountStepDef {
 
 
         employeeNewAccountPage.employee.click();
+
         //Driver.closeDriver ();
     }
 }

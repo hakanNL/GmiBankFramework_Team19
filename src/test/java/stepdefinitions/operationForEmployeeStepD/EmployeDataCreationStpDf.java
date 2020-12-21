@@ -38,6 +38,7 @@ public class EmployeDataCreationStpDf {
         ReusableMethods.wait(3);
 
         employeeNewAccountPage.signInButton.click ();
+
     }
     @Then("user clicks myOperations")
     public void userClicksMyOperations() {
@@ -156,6 +157,7 @@ public class EmployeDataCreationStpDf {
 
     }
 
+Resolving conflicts between hakan1 and master and committing changes  hakan1
 
 
 
