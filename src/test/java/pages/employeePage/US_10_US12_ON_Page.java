@@ -41,7 +41,6 @@ public class US_10_US12_ON_Page {
     public WebElement popuptakiDeleteOnayYazisi;
     @FindBy(xpath = "//div[.='translation-not-found[gmiBankBackendApp.tPCustomer.updated]']")
     public WebElement popuptakiUpdateOnayYazisi;
-
     //@FindBy(xpath = "//div[.='Internal server error.']")
     //public WebElement popuptakiDeleteOnayYazisi;
     @FindBy(xpath = "//*[@class='btn btn-primary']")

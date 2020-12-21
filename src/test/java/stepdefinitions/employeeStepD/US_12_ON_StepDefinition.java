@@ -12,6 +12,7 @@ public class US_12_ON_StepDefinition {
     //============================TC01====================================
     @Given("The employee verifies that a list of all customers who have filled in their account information is seen.")
     public void the_employee_verifies_that_a_list_of_all_customers_who_have_filled_in_their_account_information_is_seen() {
+
         ReusableMethods.verifyElementDisplayed(page.tumMusterilerListesi);
         page.employeeDropdown.click();
         page.signOutLinki.click();
@@ -67,7 +68,7 @@ public class US_12_ON_StepDefinition {
 
     @Given("The employee verifies that sees the -Confirm deletion- text in the pop-up.")
     public void the_employee_verifies_that_sees_the_text_in_the_pop_up() {
-        ReusableMethods.waitForClickablility(page.popuptakiEminMisinYazisi, 1);
+        ReusableMethods.wait(2);
         ReusableMethods.verifyElementDisplayed(page.popuptakiEminMisinYazisi);
     }
 
