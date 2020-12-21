@@ -28,7 +28,7 @@ public class US_006_MEInfoSegmentStepD {
 
     @When("click User Name button")
     public void click_User_Name_button() {
-        ReusableMethods.wait(2);
+        ReusableMethods.wait(1);
 
         infoPage.infoAccountMenu.click();
     }
@@ -40,7 +40,7 @@ public class US_006_MEInfoSegmentStepD {
 
     @Then("Verify on First Name field {string}")
     public void verify_on_First_Name_field(String string) {
-        ReusableMethods.wait(3);
+        ReusableMethods.wait(2);
         Assert.assertEquals(string,infoPage.UserInfoFirstName.getAttribute("value"));
     }
 
