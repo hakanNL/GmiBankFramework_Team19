@@ -22,7 +22,7 @@ public class EmployeeNewAccountPage {
     @FindBy(id = "password")
     public WebElement password;
 
-    @FindBy(xpath = "//*[@id=\"login-page\"]/div/form/div[3]/button[2]/span")
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement signInButton;
 
     @FindBy(xpath = "//*[@id=\"entity-menu\"]/a")
