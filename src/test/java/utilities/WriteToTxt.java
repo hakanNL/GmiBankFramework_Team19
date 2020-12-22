@@ -5,8 +5,10 @@ import pages.pojos.States;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.util.List;
+import java.util.Map;
 
-public class WriteToText {
+public class WriteToTxt {
 
     public static void saveDataInFile(String fileName, Customer[] customers)  {
         try {
@@ -66,18 +68,16 @@ public class WriteToText {
         }
     }
 
-    public static void saveAllStates(String fileName, States[] states)  {
+    public static void saveAllStates(String fileName, List<Map<String,Object>> json) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
 
-            for (int i=0; i<states.length; i++)
-                writer.append(states[i].getName()+" , "+states[i].getId()+"\n");
+            for (int i = 0; i < json.size(); i++)
+                writer.append(json.get(i).get("name") + "\n");
 
             writer.close();
-        } catch(Exception e){
-
-        }
-    }
+        } catch (Exception e) {
+        }}
 
 
 

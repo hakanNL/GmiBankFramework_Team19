@@ -1,5 +1,4 @@
 @gmibank
-@newcostemer
   Feature: User go to register for new costemer
     Scenario Outline: TC_01_user send to all boxes
       Given user go to this link "https://gmibank.com/account/register"

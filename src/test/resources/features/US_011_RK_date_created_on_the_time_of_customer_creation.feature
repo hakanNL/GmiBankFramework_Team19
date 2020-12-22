@@ -1,5 +1,4 @@
 @gmibank
-@newdate
 Feature: The date cannot be typed earlier, in the past, at the time of creation a customer
   Background: date cheking about customer
     Given go to "http://gmibank.com/login"

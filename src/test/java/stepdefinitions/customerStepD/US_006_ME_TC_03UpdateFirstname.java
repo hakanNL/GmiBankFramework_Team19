@@ -4,6 +4,7 @@ package stepdefinitions.customerStepD;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import utilities.ReusableMethods;
 
 public class US_006_ME_TC_03UpdateFirstname {
     pages.customerPage.US_006_MEInfoSegmentPage infoPage = new pages.customerPage.US_006_MEInfoSegmentPage();
@@ -21,6 +22,7 @@ public class US_006_ME_TC_03UpdateFirstname {
     @Then("Verify Settings saved!")
     public void verify_Settings_saved() {
         String message = infoPage.savingMessage.getText();
+        ReusableMethods.wait(2);
         Assert.assertEquals("Settings saved!",message);
 
     }

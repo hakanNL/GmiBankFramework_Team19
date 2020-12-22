@@ -6,12 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class EmployeeNewAccountPage {
-    public EmployeeNewAccountPage (){
-        PageFactory.initElements (Driver.getDriver (),this);
+    public EmployeeNewAccountPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//*[@id=\"account-menu\"]/a")
-    public WebElement signinDropDown ;
+    public WebElement signinDropDown;
 
     @FindBy(xpath = "//*[@id=\"login-item\"]/span")
     public WebElement sigIn;
@@ -22,7 +22,7 @@ public class EmployeeNewAccountPage {
     @FindBy(id = "password")
     public WebElement password;
 
-    @FindBy(xpath = "//*[@id=\"login-page\"]/div/form/div[3]/button[2]/span")
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement signInButton;
 
     @FindBy(xpath = "//*[@id=\"entity-menu\"]/a")
@@ -85,7 +85,7 @@ public class EmployeeNewAccountPage {
     public WebElement accountDropDown;
     @FindBy(id = "tp-customer-zelleEnrolled")
     public WebElement zelle;
-    @FindBy(id= "tp-account-createDate")
+    @FindBy(id = "tp-account-createDate")
     public WebElement createDateIcon;
 
     @FindBy(xpath = "//span[.='Create Date']")
@@ -96,17 +96,4 @@ public class EmployeeNewAccountPage {
     public WebElement signOut;
     @FindBy(id = "tp-customer-createDate")
     public WebElement customerDate;
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

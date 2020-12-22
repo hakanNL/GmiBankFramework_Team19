@@ -162,16 +162,16 @@ public class ReadTxt {
         try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
-            System.out.println(line);
-            int i = 0;
+            System.out.println("1: "+line);
+            int i = 2;
             while (line != null) {
                 String temp = "";
-                temp =line.split(",")[0].trim();
+                temp =line.split(" ")[0].trim();
 
                 sb.append(System.lineSeparator());
                 line = br.readLine();
 
-                System.out.println(i++);
+                System.out.println(i++ +": "+ line);
 
                 all.add(temp);
             }

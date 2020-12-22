@@ -1,5 +1,4 @@
 package stepdefinitions.operationForEmployeeStepD;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,6 +10,7 @@ import pages.employeePage.EmployeeNewAccountPage;
 import utilities.ConfigurationReader;
 import utilities.DateUtil;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.util.Date;
 
@@ -20,23 +20,25 @@ public class EmployeDataCreationStpDf {
     Actions actions = new Actions(Driver.getDriver());
     @Then("user signOut from Website")
     public void user_signOut_from_Website() {
-    employeeNewAccountPage.outDropDown.click ();
-    employeeNewAccountPage.signOut.click ();
+        employeeNewAccountPage.outDropDown.click ();
+        employeeNewAccountPage.signOut.click ();
     }
 
     @And("enters  username")
     public void entersUsername() {
-        employeeNewAccountPage.username.sendKeys (ConfigurationReader.getProperty ("date_username")+Keys.ENTER);
+        employeeNewAccountPage.username.sendKeys (ConfigurationReader.getProperty ("date_username"));
     }
 
     @And("enters  password")
     public void entersPassword() {
-        employeeNewAccountPage.password.sendKeys (ConfigurationReader.getProperty ("date_password")+Keys.ENTER);
+        employeeNewAccountPage.password.sendKeys (ConfigurationReader.getProperty ("date_password"));
     }
+    @And("user click signIn button")
+    public void userClickSignInButton() {
+        ReusableMethods.wait(1);
 
-    @Given("user clicks signIn button")
-    public void user_clicks_signIn_button() {
-       employeeNewAccountPage.signInButton.click ();
+        employeeNewAccountPage.signInButton.click ();
+
     }
     @Then("user clicks myOperations")
     public void userClicksMyOperations() {
@@ -110,19 +112,19 @@ public class EmployeDataCreationStpDf {
     @Given("user customer send a date {string} and click tab")
     public void user_customer_send_a_date_and_click_tab(String string) throws InterruptedException {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep (3000);
+        Thread.sleep (2000);
         employeeNewAccountPage.customerDate.sendKeys (string+Keys.TAB);
 
     }
 
     @Given("user customer send a time {string} and user click tab")
     public void user_customer_send_a_time_and_user_click_tab(String string) {
-       employeeNewAccountPage.customerDate.sendKeys (string+Keys.TAB);
+        employeeNewAccountPage.customerDate.sendKeys (string+Keys.TAB);
     }
 
     @Given("user customer click tab")
     public void user_customer_click_tab() {
-       actions.sendKeys (Keys.TAB).perform ();
+        actions.sendKeys (Keys.TAB).perform ();
     }
 
     @Given("user customer verifies valid data entry to Create Date box")
@@ -135,8 +137,9 @@ public class EmployeDataCreationStpDf {
     @Given("user customer click user box and select a user")
     public void user_customer_click_user_box_and_select_a_user() throws InterruptedException {
         Select select = new Select (employeeNewAccountPage.userDropDown);
+        ReusableMethods.wait(3);
         select.selectByIndex (4);
-        Thread.sleep (4000);
+
     }
 
     @Given("user customer verifies valid selection of user")
@@ -150,20 +153,17 @@ public class EmployeDataCreationStpDf {
         actions.sendKeys (Keys.PAGE_DOWN).perform ();
         employeeNewAccountPage.zelle.click ();
         Thread.sleep (1000);
+        Driver.closeDriver();
         //Assert.assertFalse (employeeNewAccountPage.zelle.isSelected ());
 
     }
 
-
-/*
-    @Given("user customer verifies that there is no allert message related to Zelle box")
+  /*@Given("user customer verifies that there is no allert message related to Zelle box")
     public void user_customer_verifies_that_there_is_no_allert_message_related_to_Zelle_box() {
         employeeNewAccountPage.saveButton.click ();
         String valueAfterClick = employeeNewAccountPage.zelle.getAttribute ("value");
         System.out.println (valueAfterClick);
         Assert.assertEquals (valueAfterClick,"true");
-
     }
-
  */
 }
