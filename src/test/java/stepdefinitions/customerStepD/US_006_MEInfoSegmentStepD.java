@@ -1,7 +1,5 @@
 package stepdefinitions.customerStepD;
 
-
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -28,8 +26,6 @@ public class US_006_MEInfoSegmentStepD {
 
     @When("click User Name button")
     public void click_User_Name_button() {
-        ReusableMethods.wait(2);
-
         infoPage.infoAccountMenu.click();
     }
 
@@ -41,26 +37,30 @@ public class US_006_MEInfoSegmentStepD {
     @Then("Verify on First Name field {string}")
     public void verify_on_First_Name_field(String string) {
         ReusableMethods.wait(3);
-        Assert.assertEquals(string,infoPage.UserInfoFirstName.getAttribute("value"));
+        Assert.assertEquals("Mehmet1Customer",infoPage.UserInfoFirstName.getAttribute("value"));
     }
 
     @Then("Verify on Last Name field {string}")
     public void verify_on_Last_Name_field(String string) {
+        ReusableMethods.wait(3);
         Assert.assertEquals("Ekinci",infoPage.UserInfoLastName.getAttribute("value"));
     }
 
     @Then("Verify on Email field {string}")
     public void verify_on_Email_field(String string) {
+        ReusableMethods.wait(3);
         Assert.assertEquals("izmirsh12@gmail.com",infoPage.UserInfoEmail.getAttribute("value"));
     }
 
     @Then("Verify on Language field {string}")
     public void verify_on_Language_field(String string)  {
+        ReusableMethods.wait(3);
         Assert.assertTrue(infoPage.UserInfoLanguage.getText().contains("English"));
     }
 
     @Then("click Sign out button")
     public void click_Sign_out_button() {
+        ReusableMethods.wait(3);
         infoPage.signOutButton.click();
     }
 

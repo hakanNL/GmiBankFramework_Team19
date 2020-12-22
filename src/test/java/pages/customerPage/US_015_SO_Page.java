@@ -29,7 +29,7 @@ public class US_015_SO_Page {
     @FindBy(id="entity-menu")
     public WebElement My_Operations;
 
-    @FindBy(partialLinkText = "My Accounts")
+    @FindBy(partialLinkText = "Manage Accounts")
     public WebElement My_Accounts;
 
     @FindBy(xpath="//button[@type='button']")
