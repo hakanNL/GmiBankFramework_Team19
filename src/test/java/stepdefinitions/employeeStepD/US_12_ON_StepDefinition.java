@@ -61,7 +61,7 @@ public class US_12_ON_StepDefinition {
     }
     @Given("The employee verifies that sees the -Confirm deletion- text in the pop-up.")
     public void the_employee_verifies_that_sees_the_text_in_the_pop_up() {
-        ReusableMethods.waitForClickablility(page.popuptakiEminMisinYazisi, 1);
+        ReusableMethods.wait(2);
         ReusableMethods.verifyElementDisplayed(page.popuptakiEminMisinYazisi);
     }
     @Given("The employee clicks the Delete button in the -Confirm delete operation- popup")
@@ -71,9 +71,9 @@ public class US_12_ON_StepDefinition {
     }
     @Then("The employee verifies that has seen the -translation-not-found [gmiBankBackendApp.tPCustomer.deleted]- message.")
     public void the_employee_verifies_that_has_seen_the_message() {
-        ReusableMethods.wait(4);
+        ReusableMethods.wait(2);
         Assert.assertEquals(page.popuptakiDeleteOnayYazisi.getText(),"translation-not-found[gmiBankBackendApp.tPCustomer.deleted]");
-        ReusableMethods.wait(3);
+        ReusableMethods.wait(2);
         page.employeeDropdown.click();
         page.signOutLinki.click();
     }
