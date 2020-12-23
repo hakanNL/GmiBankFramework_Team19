@@ -27,12 +27,12 @@ public class US_006_ME_TC_02LanguagesStepD {
     @Then("click Save button")
     public void click_Save_button() {
        infoPage.UserInfoSaveButton.click();
-       ReusableMethods.wait(3);
+       ReusableMethods.wait(2);
     }
 
     @Then("Verify Dil")
     public void verify_Dil() {
-        ReusableMethods.wait(3);
+        ReusableMethods.wait(2);
         Assert.assertEquals("Dil",infoPage.languageTitle.getText());
     }
 
