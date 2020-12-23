@@ -1,4 +1,4 @@
-@gmibank
+@gmibank @US13
 Feature: An Employee can create a new Account
 
   Background: Employee gmibank homepage
