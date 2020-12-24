@@ -30,7 +30,7 @@ public class US_024_ED_Create_States_With_API {
                 accept(ContentType.JSON).
                 when().
                 get(endpoint).
-            then().
+                then().
                 assertThat().
                 statusCode(200).
                 contentType(ContentType.JSON).
@@ -101,6 +101,5 @@ public class US_024_ED_Create_States_With_API {
         System.out.println("==============================");
         responseDelete.prettyPrint();
         System.out.println("==============================");
-        //response.prettyPrint();
     }
 }
