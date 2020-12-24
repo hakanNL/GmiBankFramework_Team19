@@ -19,6 +19,7 @@ public class US_020_Read_customer_info {
     JsonPath jsonPath;
     List<Map<String, Object>> allCustomers;
 
+
     @Given("User go to customers end point {string}")
     public void user_go_to_customers_end_point(String endpoint) {
         response = given().
@@ -30,11 +31,11 @@ public class US_020_Read_customer_info {
     @Given("Get all information for customers as De-Serialization")
     public void get_all_information_for_customers_as_De_Serialization() {
         jsonPath = response.jsonPath();
-       allCustomers = jsonPath.getList("$");
+        allCustomers = jsonPath.getList("$");
         }
 
     @Then("User validate {int} th customers info")
-    public void user_validate_th_customers_info(Integer int1) {
+    public void user_validate_th_customers_info(Integer costumerS) {
         //String actualSSN = allCustomers.get(0).get("ssn").toString();
        // Assert.assertEquals("458-62-6584",actualSSN);
         List<String> actualSsnlist = new ArrayList<>();
