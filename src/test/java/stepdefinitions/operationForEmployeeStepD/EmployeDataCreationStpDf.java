@@ -157,7 +157,6 @@ public class EmployeDataCreationStpDf {
 
     }
 
-Resolving conflicts between hakan1 and master and committing changes  hakan1
 
 
 

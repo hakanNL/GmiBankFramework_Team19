@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@api",
-        dryRun = false
+        tags = "@apih",
+        dryRun = true
 )
 public class GmiBankRunner {
 
