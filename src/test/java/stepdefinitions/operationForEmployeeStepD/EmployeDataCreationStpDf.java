@@ -131,13 +131,6 @@ public class EmployeDataCreationStpDf {
         //Assert.assertFalse (employeeNewAccountPage.zelle.isSelected ());
     }
 
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> refs/remotes/origin/master
 /*
     @Given("user customer verifies that there is no allert message related to Zelle box")
     public void user_customer_verifies_that_there_is_no_allert_message_related_to_Zelle_box() {
