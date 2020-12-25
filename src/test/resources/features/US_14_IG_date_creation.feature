@@ -1,4 +1,4 @@
-@gmibank
+@gmbank @US14
 Feature: US14 test
   Background: user enters gmibank homepage then reaches create new costomers link
     Given Go to gmibank.com home page
