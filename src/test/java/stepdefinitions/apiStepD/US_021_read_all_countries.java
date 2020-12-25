@@ -1,23 +1,22 @@
 package stepdefinitions.apiStepD;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.junit.Assert;
 import utilities.ConfigurationReader;
-
+import org.junit.Assert;
 import java.util.List;
 import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 
 public class US_021_read_all_countries {
-
-     Response response;
+    Response response;
+    JsonPath jsonPath;
     List<Map<String,Object>>  allCountry;
     @Given("User go to countries end point {string}")
+
     public void user_go_to_countries_end_point(String countryEndpoint) {
         response=
                 given()
