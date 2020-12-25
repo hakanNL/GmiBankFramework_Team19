@@ -22,7 +22,7 @@ public class US_021_read_all_countries {
                 given()
                 .accept(ContentType.JSON)
                 .auth()
-                .oauth2(ConfigurationReader.getProperty("token"))
+                .oauth2(ConfigurationReader.getProperty("api_bearer_token"))
                 .when()
                 .get(countryEndpoint);
         response.prettyPrint();
@@ -35,7 +35,7 @@ public class US_021_read_all_countries {
     }
     @Then("User validate {int} th countries info")
     public void user_validate_th_countries_info(Integer int1) {
-    String expectedCountry="New Mexico";
+    String expectedCountry="DOMINIC";
         Assert.assertEquals(expectedCountry,allCountry.get(6).get("name"));
     }
 
