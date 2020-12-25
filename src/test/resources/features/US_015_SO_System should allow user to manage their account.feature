@@ -1,4 +1,5 @@
 @accountmanage01
+@gmibank @sa
 Feature: User_account_manage
   Background: User check account
   Given Go to the web address: "http://www.gmibank.com/login"
@@ -31,3 +32,4 @@ Feature: User_account_manage
     And Write a description "Grant" in the Description section
     And Click on the Make Transfer button
     Then It should be checked that "Transfer is successfull" is displayed.
+
