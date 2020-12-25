@@ -81,4 +81,5 @@ public class US_015_SO_Page {
 
     @FindBy(xpath="//div[@class='Toastify__toast-body']")
     public WebElement Transfer_successfull;
+
 }
