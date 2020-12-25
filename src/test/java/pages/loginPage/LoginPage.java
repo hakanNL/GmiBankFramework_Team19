@@ -7,15 +7,18 @@ import utilities.Driver;
 
 public class LoginPage {
 
-        public LoginPage() {
-            PageFactory.initElements(Driver.getDriver(), this);
-        }
+    public LoginPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
     @FindBy(id = "account-menu")
     public WebElement accountMenu;
 
+
     @FindBy(id = "login-item")
+
     public WebElement signInButton;
+
 
     @FindBy(name = "username")
     public WebElement username;
@@ -26,10 +29,27 @@ public class LoginPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement submitButton;
 
-    @FindBy(xpath = "//button[@type='button']")
+    @FindBy(xpath = "//span[contains(text(),'Cancel')]")
     public WebElement cancelButton;
 
-    @FindBy(xpath = "//span[text()='Sign out']")
+    @FindBy(xpath = "//span[contains(text(),'Sign out')]")
     public WebElement signOutButton;
+
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement errorMessage;
+
+    @FindBy(xpath = "//div[@class='modal-content']")
+    public WebElement signInDialog;
+
+    @FindBy(linkText = "Did you forget your password?")
+    public WebElement resetPasswordText;
+
+    @FindBy(linkText = "Register a new account")
+    public WebElement registerNewAccountText;
+
+    @FindBy(xpath = "//div[@class='Toastify']")
+    public WebElement successAlertMessage;
+
+
 
 }
