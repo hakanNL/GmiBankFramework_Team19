@@ -1,4 +1,4 @@
-@US29
+@US29 @gmibank
 Feature: US_29_All data validation based on DB
 
   Background: create a connection with DB

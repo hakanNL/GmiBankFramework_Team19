@@ -1,8 +1,8 @@
-
-  Feature: Team 19
+@EndT0End
+  Feature: Team Tiger And to And test
 
     Scenario: Team_19 End To End Tek seferde registration
-
+  #register
       Given Kullanici gmibank_register sayfasina gider
       And Kullanici SSN text box una gecerli bir gecerli_SSN girer
       And Kullanici First Name kutusuna gecerli bir first_Name girer
@@ -14,9 +14,33 @@
       And Kullanici New password kutusuna karakter ve digid den olusan gecerli bir new_Password girer
       And Kullanici New password confirmation kutusuna tekrar new_Password girer
       And Kullanici Register butonuna tiklar
+  #userRoleCostumer
+      Given Go to the web address: "http://www.gmibank.com/login"
+      And Type the name of the valid admin "nadminUS17" in the Username box.
+      And Type the current password in the password1 "nadminUS18+" box.
+      And Click on the Adminisration button
+      And Click on the User management button
+      And Click on once the Login button
+      And Click on once the Edit button
+      And Select Profiles as User
+      And Click on once the Save button
+      And Click on the Activate button for first User
+      And It should be checked that "A user is updated with identifier" is displayed."
+      And Click on twice the Login button
+      Then Click on the Deactivate button for first User
+  #employeeCtreateAccount
+      Given Go to gmibank.com home page
+      And Click to User Account Menu and Click to SignIn
+      And Enter the username with valid credentail
+      And Enter the pasword with valid credentail
+      And Click to Sign in button
+      And Click to My Operations drop down menu and Click to Manage Accounts then click to Create New Account
+      Then User can select an account type as CHECKING, SAVING, CREDIT_CARD or INVESTING
+      Then user signOut from Website
+  #sendMoney
       And Go to the web address: "http://www.gmibank.com/login"
-      And Type the name of the valid customer "dcostumer19" in the Username box.
-      And Type the current password in the password "Dc145314" box.
+      And Type the name of the valid customer "salih" in the Username box.
+      And Type the current password in the password "Salih123." box.
       And Click on the My Operations button
       And Click on the My Accounts button
       And Click on the View Transaction button
