@@ -1,8 +1,8 @@
-@gmibank
+@EndT0End
   Feature: Team Tiger And to And test
 
     Scenario: Team_19 End To End Tek seferde registration
-#register
+  #register
       Given Kullanici gmibank_register sayfasina gider
       And Kullanici SSN text box una gecerli bir gecerli_SSN girer
       And Kullanici First Name kutusuna gecerli bir first_Name girer
@@ -28,7 +28,6 @@
       And It should be checked that "A user is updated with identifier" is displayed."
       And Click on twice the Login button
       Then Click on the Deactivate button for first User
-
   #employeeCtreateAccount
       Given Go to gmibank.com home page
       And Click to User Account Menu and Click to SignIn
