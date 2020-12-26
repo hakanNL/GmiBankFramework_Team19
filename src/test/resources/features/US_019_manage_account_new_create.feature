@@ -1,4 +1,4 @@
-@US19
+@US19 @gmibank
 Feature: System should allow Admin to create a new Account
 
 

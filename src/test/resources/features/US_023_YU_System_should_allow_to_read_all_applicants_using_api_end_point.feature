@@ -1,4 +1,4 @@
-@US_23
+@US_23 @gmibank
 Feature: US_23_YU_System_should_allow_to_read_all_applicants_using_api_end_point.feature
 
   Background: Use api end point

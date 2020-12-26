@@ -1,4 +1,4 @@
-@US18
+@US18 @gmibank
 Feature: System should allow Admin to manage a customer
 
 

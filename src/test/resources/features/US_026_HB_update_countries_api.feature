@@ -1,4 +1,4 @@
-@apih
+@apih @gmibank
 
 Feature: System should allow to update countries data using api end point
     Scenario: TC_01_User read all countries just created and validate

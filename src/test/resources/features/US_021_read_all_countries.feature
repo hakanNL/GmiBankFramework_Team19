@@ -1,4 +1,4 @@
-@Apii
+@Apii @gmibank
 Feature: US_021_Read all countries info using api end point
 
   Scenario: TC_2_System should allow to get all data using api end point

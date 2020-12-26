@@ -27,15 +27,17 @@ public class US_017 {
     }
     @Given("Click on the Adminisration button")
     public void click_on_the_Adminisration_button() {
+        ReusableMethods.wait(3);
         page.Admin_Menu.click();
     }
     @Given("Click on the User management button")
     public void click_on_the_User_management_button() {
         page.User_management.click();
     }
+
     @Given("Click on once the Login button")
     public void click_on_once_the_Login_button() {
-        ReusableMethods.wait(1);
+        ReusableMethods.wait(3);
         page.Login.click();
     }
     @Given("Click on once the Edit button")
@@ -68,7 +70,7 @@ public class US_017 {
     public void click_on_twice_the_Login_button() {
         ReusableMethods.wait(5);
         Actions actions = new Actions(Driver.getDriver());
-        actions.doubleClick(page.Login);
+        actions.doubleClick(page.Login).perform();
     }
     @Then("Click on the Deactivate button for first User")
     public void click_on_the_Deactivate_button_for_first_User() {

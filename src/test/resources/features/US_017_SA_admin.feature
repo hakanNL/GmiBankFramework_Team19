@@ -1,9 +1,9 @@
-@admin_user_management
+@admin_user_management @gmibank
 Feature: US_17_SO_Admin_user_account_manage
   Background: User check account
     Given Go to the web address: "http://www.gmibank.com/login"
-    And Type the name of the valid admin "salih" in the Username box.
-    And Type the current password in the password1 "Salih123." box.
+    And Type the name of the valid admin "nadminUS17" in the Username box.
+    And Type the current password in the password1 "nadminUS18+" box.
   @US_17_TC_0001_User
   Scenario: TC_0001_Admin can activate a role as User
     And Click on the Adminisration button
