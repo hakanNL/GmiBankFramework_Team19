@@ -9,6 +9,6 @@ Feature: System should allow Admin to create a new Account
     And the user_name enters
     And the user_password enters
     And user click signIn button
-    Then user clicks myOperationsgi
+    Then user clicks myOperations
     And Manage  Account is safe
     And admin open the manage account page
