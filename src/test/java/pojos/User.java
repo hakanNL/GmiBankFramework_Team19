@@ -1,10 +1,10 @@
-package pages.pojos;
+package pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-//10 gece basliyoruz
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
-    private int id;
+    private  int id;
     private String login;
     private String firstName;
     private String lastName;
@@ -12,7 +12,6 @@ public class User {
     private boolean activated;
     private String langKey;
     private String imageUrl;
-    private String resetDate;
 
     public int getId() {
         return id;
@@ -85,4 +84,6 @@ public class User {
     public void setResetDate(String resetDate) {
         this.resetDate = resetDate;
     }
+
+    private String resetDate;
 }

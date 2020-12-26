@@ -1,29 +1,28 @@
 package stepdefinitions.apiStepD;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.junit.Assert;
 import utilities.ConfigurationReader;
-
+import org.junit.Assert;
 import java.util.List;
 import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 
 public class US_021_read_all_countries {
-
-     Response response;
+    Response response;
+    JsonPath jsonPath;
     List<Map<String,Object>>  allCountry;
     @Given("User go to countries end point {string}")
+
     public void user_go_to_countries_end_point(String countryEndpoint) {
         response=
                 given()
                 .accept(ContentType.JSON)
                 .auth()
-                .oauth2(ConfigurationReader.getProperty("token"))
+                .oauth2(ConfigurationReader.getProperty("api_bearer_token"))
                 .when()
                 .get(countryEndpoint);
         response.prettyPrint();
@@ -36,7 +35,7 @@ public class US_021_read_all_countries {
     }
     @Then("User validate {int} th countries info")
     public void user_validate_th_countries_info(Integer int1) {
-    String expectedCountry="New Mexico";
+    String expectedCountry="DOMINIC";
         Assert.assertEquals(expectedCountry,allCountry.get(6).get("name"));
     }
 

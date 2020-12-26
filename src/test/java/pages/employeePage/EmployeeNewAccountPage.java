@@ -13,7 +13,7 @@ public class EmployeeNewAccountPage {
     @FindBy(xpath = "//*[@id=\"account-menu\"]/a")
     public WebElement signinDropDown;
 
-    @FindBy(xpath = "//*[@id=\"login-item\"]/span")
+    @FindBy(id = "login-item")
     public WebElement sigIn;
 
     @FindBy(id = "username")
@@ -25,7 +25,7 @@ public class EmployeeNewAccountPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement signInButton;
 
-    @FindBy(xpath = "//*[@id=\"entity-menu\"]/a")
+    @FindBy(xpath = "//*[@id=\"entity-menu\"]/a/span")
     public WebElement myOperations;
 
     @FindBy(xpath = "//*[@id=\"entity-menu\"]/div/a[2]/span")
@@ -96,4 +96,6 @@ public class EmployeeNewAccountPage {
     public WebElement signOut;
     @FindBy(id = "tp-customer-createDate")
     public WebElement customerDate;
+    @FindBy(xpath = "//*[@id=\"app-view-container\"]/div[1]/div/div/div/span")
+    public WebElement adminManageError;
 }

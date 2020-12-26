@@ -1,11 +1,11 @@
-package pages.pojos;
+package pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonIgnoreProperties(ignoreUnknown =true)
 public class Customer {
 
-    private int id;
+    private  int id;
     private String firstName;
     private String lastName;
     private String middleInitial;
@@ -18,10 +18,9 @@ public class Customer {
     private String ssn;
     private String createDate;
     private boolean zelleEnrolled;
-    private Country  country;
+    private Country country;
     private String state;
     private User user;
-    private String accounts;
 
     public int getId() {
         return id;
@@ -151,11 +150,16 @@ public class Customer {
         this.user = user;
     }
 
-    public String getAccounts() {
+    public Accounts getAccounts() {
         return accounts;
     }
 
-    public void setAccounts(String accounts) {
+    public void setAccounts(Accounts accounts) {
         this.accounts = accounts;
     }
+
+    private Accounts accounts;
+
+
+
 }
