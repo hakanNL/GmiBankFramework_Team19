@@ -1,4 +1,4 @@
-@api
+@api @gmibank
 @api22
   Feature: US_22_ON_System should allow to read states using api end point
 

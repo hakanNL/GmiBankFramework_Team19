@@ -2,8 +2,8 @@
 Feature: User_account_manage
   Background: User check account
     Given Go to the web address: "http://www.gmibank.com/login"
-    And Type the name of the valid customer "dcostumer19" in the Username box.
-    And Type the current password in the password "Dc145314" box.
+    And Type the name of the valid customer "salih" in the Username box.
+    And Type the current password in the password "Salih123." box.
 
   @US_16_TC_0001_User
   Scenario: TC_0001_Money transfer should be available

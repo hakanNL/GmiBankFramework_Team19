@@ -1,4 +1,4 @@
-@api
+@api @gmibank
 Feature: US_020_Read all customers info using api end point
   Scenario: System should allow to get all data using api end point
     Given User go to customers end point "https://www.gmibank.com/api/tp-customers"

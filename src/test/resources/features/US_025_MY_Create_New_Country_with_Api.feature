@@ -1,4 +1,4 @@
-@US25
+@US25 @gmibank
 Feature: Create new Country with api
 
   Scenario: TC_001 User create country with api

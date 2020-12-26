@@ -1,4 +1,4 @@
-@createStates
+@createStates @gmibank
   Feature: create states
     Scenario: TC_001 User create states with api
       Given go to end point "https://www.gmibank.com/api/tp-states"
