@@ -1,8 +1,9 @@
 package utilities;
 
-import pages.pojos.Customer;
-import pages.pojos.States;
+import pojos.Customer;
+import pojos.States;
 
+import javax.naming.event.ObjectChangeListener;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.List;
@@ -91,6 +92,30 @@ public class WriteToTxt {
             writer.close();
         } catch(Exception e){
 
+        }
+    }
+
+    public static void saveAllSSN(String fileName, List<Map<String, Object>> data)  {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
+
+            for (int i =0; i<data.size();i++)
+
+            writer.append(data.get(i).get("lastName") + "\n");
+           // writer.append(data.get(i).get("firstName") + ", " + data.get(i).get("lastName") + "\n");
+            writer.close();
+        } catch(Exception e){
+        }
+    }
+
+    public static void saveAllCustomerDateBase(String fileName, List<Object> allCustomer) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
+            for (int i = 0; i < allCustomer.size(); i++) {
+                writer.append(allCustomer.get(i) + "\n");
+            }
+            writer.close();
+        } catch (Exception e) {
         }
     }
 }

@@ -13,7 +13,7 @@ Feature: US_005_YU_Login_page_should_not_be_accessible_with_invalid_credentials.
     Then verify if there is an error message on the screen
 
   Scenario: TC02 User cannot login with invalid password validating the error message
-    When user enters a valid username "uluturk"
+    When user enters a valid username "uluturk56"
     When user enters a invalid password "gs.1905"
     And user clicks on second sing in button
     Then verify if there is an error message on the screen

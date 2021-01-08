@@ -71,7 +71,7 @@ public class US_22_ON_ReadStates {
     //===========================TC_01==============================
     @Given("User gets all state data from the system and prints to .csv file")
     public void user_gets_all_state_data_from_the_system_and_prints_to_csv_file() {
-        WriteToTxt.saveAllStates("allstatesdata.csv",allStatesList);
+       WriteToTxt.saveAllStates("allstatesdata.csv",allStatesList);
 
     }
 

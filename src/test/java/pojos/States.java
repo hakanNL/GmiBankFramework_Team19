@@ -1,13 +1,12 @@
-package pages.pojos;
+package pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Country {
+public class States {
 
     private int id;
     private String name;
-    private String states;
 
     public int getId() {
         return id;
@@ -25,11 +24,13 @@ public class Country {
         this.name = name;
     }
 
-    public String getStates() {
-        return states;
+    public Country getCountry() {
+        return country;
     }
 
-    public void setStates(String states) {
-        this.states = states;
+    public void setCountry(Country country) {
+        this.country = country;
     }
+
+    private Country country;
 }
